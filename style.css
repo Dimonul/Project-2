@@ -102,7 +102,7 @@ section {
 }
 
 body {
-  line-height: 1;
+  line-height: 0;
 }
 
 ol,
@@ -140,26 +140,41 @@ body {
   font-family: "Nunito Sans", sans-serif;
   width: 100%;
 }
+body .container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
 
 p {
   margin-top: 0;
 }
 
+header .container:nth-child(2) {
+  padding: 0px;
+}
 header .logo {
   width: 100%;
   padding-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
+}
+header .logo img {
+  width: 100%;
+  max-width: 211px;
 }
 header .search {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-width: 360px;
-  min-height: 232px;
-  background-color: #f9f9f9;
+  width: 100%;
+  background-image: url(Images/Search_Mobile.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  padding-bottom: 150px;
 }
 header .search h2 {
   font-size: 24px;
@@ -167,6 +182,7 @@ header .search h2 {
   line-height: 32px;
   letter-spacing: 0.01em;
   text-align: center;
+  padding-top: 24px;
 }
 header .search h4 {
   font-size: 16px;
@@ -176,32 +192,160 @@ header .search h4 {
   text-align: center;
   color: #646464;
 }
-header .search .background {
-  object-fit: cover;
-}
 header .search-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
-  gap: 8px;
-  width: 328px;
+  padding: 16px;
+  width: 100%;
   height: 56px;
   justify-content: center;
 }
-header .search-bar form {
+header .search-bar i {
+  font-size: 20px;
+}
+header .search-bar input {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 8px 16px;
-  gap: 8px;
-  width: 328px;
+  width: 100%;
   height: 56px;
+  border: 1px solid #E8E8EA;
+  border-radius: 18px 0 0 18px;
+  border-right: none;
+}
+header .search-bar button {
+  border-radius: 0 18px 18px 0;
+  height: 56px;
+  border: 1px solid #E8E8EA;
+  background-color: white;
+  border-left: none;
+}
+header .search-bar button img {
+  padding-right: 10px;
+  size: 23px;
 }
 
 footer {
   background-color: #D9D9D9;
+}
+footer .logo {
+  display: none;
+}
+footer h3 {
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+footer h5 {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+footer li {
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+footer .rights {
+  padding-top: 30px;
+  padding-bottom: 16px;
+}
+
+main h2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 132%;
+  height: 32px;
+  font-feature-settings: "liga" off;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+main .card {
+  width: 100%;
+  height: 128px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  background: #F9F9F9;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+main .card img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+main .card .review {
+  display: none;
+}
+main .card button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  background: #059E67;
+  border-radius: 12px;
+  margin-top: 60px;
+  border-style: none;
+}
+main .card i.fa-solid.fa-bag-shopping {
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+main .card .cardinfo {
+  display: flex;
+  flex-direction: column;
+  height: 128px;
+  width: 100%;
+  white-space: normal;
+}
+main .card h4 {
+  height: auto;
+  padding-left: 16px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 116%;
+}
+main .card h5 {
+  height: 16px;
+  color: #646464;
+  padding-left: 16px;
+  padding-bottom: 50px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+}
+main .card p {
+  padding-left: 16px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 135%;
 }
 
 /*# sourceMappingURL=style.css.map */
