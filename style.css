@@ -274,7 +274,11 @@ main h2 {
   margin-top: 16px;
   margin-bottom: 16px;
 }
-main .card {
+main .fruits {
+  display: flex;
+  flex-direction: column;
+}
+main .fruits .card {
   width: 100%;
   height: 128px;
   margin-bottom: 16px;
@@ -286,15 +290,15 @@ main .card {
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
 }
-main .card img {
+main .fruits .card img {
   width: 96px;
   height: 96px;
   border-radius: 50%;
 }
-main .card .review {
+main .fruits .card .review {
   display: none;
 }
-main .card button {
+main .fruits .card button {
   width: 32px;
   height: 32px;
   display: flex;
@@ -307,19 +311,19 @@ main .card button {
   margin-top: 60px;
   border-style: none;
 }
-main .card i.fa-solid.fa-bag-shopping {
+main .fruits .card i.fa-solid.fa-bag-shopping {
   width: 32px;
   height: 32px;
   color: white;
 }
-main .card .cardinfo {
+main .fruits .card .cardinfo {
   display: flex;
   flex-direction: column;
   height: 128px;
   width: 100%;
   white-space: normal;
 }
-main .card h4 {
+main .fruits .card h4 {
   height: auto;
   padding-left: 16px;
   font-family: "Nunito Sans";
@@ -328,7 +332,7 @@ main .card h4 {
   font-size: 14px;
   line-height: 116%;
 }
-main .card h5 {
+main .fruits .card h5 {
   height: 16px;
   color: #646464;
   padding-left: 16px;
@@ -339,13 +343,82 @@ main .card h5 {
   font-size: 12px;
   line-height: 130%;
 }
-main .card p {
+main .fruits .card p {
   padding-left: 16px;
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 135%;
+}
+main .fruits .card .sale {
+  height: 16px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  order: 0;
+  background: #F0FEE2;
+  padding: 4px 8px;
+  position: absolute;
+  border-radius: 10px;
+}
+main .fruits .card .discount {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+main .fruits .card .discount :nth-child(1) {
+  color: #CA8383;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 135%;
+  letter-spacing: 0.01em;
+}
+main .fruits .card .discount :nth-child(2) {
+  text-decoration: line-through;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 135%;
+  letter-spacing: 0.01em;
+}
+main .categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+main .categories .categoriescard {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 0px;
+  width: 155px;
+  height: 144px;
+  background: #F9F9F9;
+  border-radius: 16px;
+}
+main .categories img {
+  width: 120px;
+  height: 120px;
+}
+main .categories p {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 147%;
 }
 
 /*# sourceMappingURL=style.css.map */
