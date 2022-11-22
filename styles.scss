@@ -1,15 +1,7 @@
 @import "./variables";
+@import "./styles-berries";
 
-// .container{
-//     min-width: 360px;
-//     width: 100%;
-//     margin: 0 auto;
-//     display: flex;
-//     box-sizing:border-box;
-//     justify-content: center;
-//     align-items: flex-start;
-//     flex-direction: row;
-// }
+
 html,
 body,
 div,
@@ -319,15 +311,17 @@ main {
         margin-bottom: 16px;
     }
 
-
+    .selector {
+        display: none;
+    }
 
     .fruits {
         display: flex;
         flex-direction: column;
 
-        // .dropdown {
-        //     display: none;
-        // }
+        .dropdown {
+            display: none;
+        }
 
         .card {
             width: 100%;
@@ -437,6 +431,8 @@ main {
                 position: absolute;
                 border-radius: 10px;
                 top: 0;
+                color: $link;
+
             }
 
             .discount {
@@ -511,6 +507,10 @@ main {
         }
 
     }
+
+    .pagination {
+        display: none;
+    }
 }
 
 @media screen AND (min-width: 1350px) {
@@ -568,6 +568,37 @@ main {
             padding-right: 40px;
         }
 
+        .selector {
+            display: flex;
+            justify-content: space-between;
+            color: $gray2;
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                color: $gray2;
+
+                &.dropdown:hover .dropdown-content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                }
+
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+
+                    background-color: $productbackround;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    padding: 12px 16px;
+                    z-index: 1;
+
+                }
+            }
+        }
+
         .fruits {
 
             display: flex;
@@ -575,105 +606,176 @@ main {
             flex-direction: row;
             gap: 30px;
             width: 100%;
+            margin-top: 30px;
 
-        
 
 
-        .card {
-            flex: 1 0 23%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                width: 100%;
-                border-radius: 0;
+            .card {
+                flex: 1 0 23%;
                 height: auto;
-            }
-
-            h4 {
-                font-family: 'Nunito Sans';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 22px;
-                line-height: 22px;
-            }
-
-            i.fa-solid.fa-bag-shopping {
-                height: auto;
-            }
-
-            h5 {
-                font-family: 'Nunito Sans';
-                font-style: normal;
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 130%;
-            }
-
-            span {
-                display: inline;
-                font-family: 'Nunito Sans';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 14px;
-                line-height: 112%;
-                color: #FFFFFF;
-            }
-
-            button {
-                width: 100%;
-                height: 48px;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
+                align-content: center;
                 justify-content: center;
-                flex-wrap: nowrap;
                 align-items: center;
-            }
 
-            .review {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                justify-content: flex-start;
+                img {
+                    width: 100%;
+                    border-radius: 0;
+                    height: auto;
+                }
 
-                .stars {
-                    display: inline-block;
-                    font-family: 'Font Awesome 6 Free';
-                    z-index: 0;
+                h4 {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 22px;
+                }
 
-                    &:before {
-                        content: "\f005 \f005 \f005 \f005 \f005";
-                        font-weight: 900;
-                        font-style: normal;
-                        line-height: 1;
+                i.fa-solid.fa-bag-shopping {
+                    height: auto;
+                }
 
-                    }
+                h5 {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 130%;
+                }
 
-                    &.full {
-                        width: 89%;
-                        overflow: hidden;
-                        max-width: 90px;
-                        position: absolute;
-                        z-index: 1;
+                span {
+                    display: inline;
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 112%;
+                    color: #FFFFFF;
+                }
+
+                button {
+                    width: 100%;
+                    height: 48px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                }
+
+                .review {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
+
+                    .stars {
+                        display: inline-block;
+                        font-family: 'Font Awesome 6 Free';
+                        z-index: 0;
 
                         &:before {
-                            color: yellow;
-                        }
-                    }
+                            content: "\f005 \f005 \f005 \f005 \f005";
+                            font-weight: 900;
+                            font-style: normal;
+                            line-height: 1;
 
+                        }
+
+                        &.full {
+                            width: 89%;
+                            overflow: hidden;
+                            max-width: 90px;
+                            position: absolute;
+                            z-index: 1;
+
+                            &:before {
+                                color: yellow;
+                            }
+                        }
+
+                    }
                 }
-            }
             }
 
         }
 
+        .pagination {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 16px;
+            gap: 40px;
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 112%;
+
+            &:hover {
+                color: $buttonhover;
+            }
+        }
 
         .categories {
             grid-template-columns: repeat(5, 1fr);
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 1350px) and (min-width: 700px) {
+
+    header {
+        .search {
+            background-position: center;
+        }
+    }
+
+    body {
+        .fruits {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 30px;
+            width: 100%;
+            margin-top: 30px;
+
+            .card {
+                flex: 1 0 23%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+
+                button {
+                    width: 100%;
+                    height: 48px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                }
+                span{
+                    display: inline;
+                    font-family: "Nunito Sans";
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 112%;
+                    color: #FFFFFF;
+                }
+            }
+        }
+        .categories {
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 }

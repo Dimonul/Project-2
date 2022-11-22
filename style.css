@@ -140,6 +140,163 @@ body {
   font-family: "Nunito Sans", sans-serif;
   width: 100%;
 }
+
+main .page {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+}
+main .page h4 {
+  color: #BCBCBC;
+}
+main .page span {
+  color: #646464;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  width: 100%;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  width: 100%;
+}
 body .container {
   padding-left: 16px;
   padding-right: 16px;
@@ -279,9 +436,15 @@ main h2 {
   margin-top: 16px;
   margin-bottom: 16px;
 }
+main .selector {
+  display: none;
+}
 main .fruits {
   display: flex;
   flex-direction: column;
+}
+main .fruits .dropdown {
+  display: none;
 }
 main .fruits .card {
   width: 100%;
@@ -379,6 +542,7 @@ main .fruits .card .sale {
   position: absolute;
   border-radius: 10px;
   top: 0;
+  color: #1D1929;
 }
 main .fruits .card .discount {
   display: flex;
@@ -436,6 +600,9 @@ main .categories p {
   line-height: 147%;
   text-decoration: none;
 }
+main .pagination {
+  display: none;
+}
 
 @media screen and (min-width: 1350px) {
   header .container:nth-child(2) {
@@ -479,12 +646,37 @@ main .categories p {
     padding-left: 40px;
     padding-right: 40px;
   }
+  body .selector {
+    display: flex;
+    justify-content: space-between;
+    color: #646464;
+  }
+  body .selector .dropdown {
+    position: relative;
+    display: inline-block;
+    color: #646464;
+  }
+  body .selector .dropdown.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  body .selector .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F9F9F9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
   body .fruits {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 30px;
     width: 100%;
+    margin-top: 30px;
   }
   body .fruits .card {
     flex: 1 0 23%;
@@ -562,8 +754,67 @@ main .categories p {
   body .fruits .card .review .stars.full:before {
     color: yellow;
   }
+  body .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px;
+    gap: 40px;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 112%;
+  }
+  body .pagination:hover {
+    color: #00774C;
+  }
   body .categories {
     grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media screen and (max-width: 1350px) and (min-width: 700px) {
+  header .search {
+    background-position: center;
+  }
+  body .fruits {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  body .fruits .card {
+    flex: 1 0 23%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  body .fruits .card button {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  body .fruits .card span {
+    display: inline;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 112%;
+    color: #FFFFFF;
+  }
+  body .categories {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
