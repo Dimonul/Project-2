@@ -149,6 +149,10 @@ p {
   margin-top: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 header .container:nth-child(2) {
   padding: 0px;
 }
@@ -191,6 +195,7 @@ header .search h4 {
   letter-spacing: 0em;
   text-align: center;
   color: #646464;
+  padding-bottom: 24px;
 }
 header .search-bar {
   display: flex;
@@ -290,6 +295,12 @@ main .fruits .card {
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
 }
+main .fruits .card span {
+  display: none;
+}
+main .fruits .card a {
+  position: relative;
+}
 main .fruits .card img {
   width: 96px;
   height: 96px;
@@ -367,6 +378,7 @@ main .fruits .card .sale {
   padding: 4px 8px;
   position: absolute;
   border-radius: 10px;
+  top: 0;
 }
 main .fruits .card .discount {
   display: flex;
@@ -404,14 +416,17 @@ main .categories .categoriescard {
   justify-items: center;
   align-items: center;
   padding: 0px;
-  width: 155px;
-  height: 144px;
+  width: 100%;
+  height: auto;
   background: #F9F9F9;
   border-radius: 16px;
+  text-decoration: none;
 }
 main .categories img {
-  width: 120px;
-  height: 120px;
+  width: 100%;
+  height: auto;
+  padding-left: 17.5px;
+  padding-right: 17.5px;
 }
 main .categories p {
   font-family: "Nunito Sans";
@@ -419,6 +434,137 @@ main .categories p {
   font-weight: 700;
   font-size: 16px;
   line-height: 147%;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1350px) {
+  header .container:nth-child(2) {
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 12px;
+  }
+  header .logo {
+    justify-content: flex-start;
+  }
+  header .search {
+    align-items: flex-start;
+    padding-bottom: 50px;
+    padding-left: 72px;
+    background-position: center;
+    background-color: #F9F9F9;
+    border-radius: 12px;
+    height: 232px;
+    background-image: url(Images/Search_Desktop.png);
+  }
+  header .search h2 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    padding-top: 24px;
+  }
+  header .search h4 {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 147%;
+  }
+  header .search-bar {
+    padding: 0px;
+    width: 383px;
+  }
+  body .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  body .fruits {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+  }
+  body .fruits .card {
+    flex: 1 0 23%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  body .fruits .card img {
+    width: 100%;
+    border-radius: 0;
+    height: auto;
+  }
+  body .fruits .card h4 {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+  }
+  body .fruits .card i.fa-solid.fa-bag-shopping {
+    height: auto;
+  }
+  body .fruits .card h5 {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+  }
+  body .fruits .card span {
+    display: inline;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 112%;
+    color: #FFFFFF;
+  }
+  body .fruits .card button {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  body .fruits .card .review {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  body .fruits .card .review .stars {
+    display: inline-block;
+    font-family: "Font Awesome 6 Free";
+    z-index: 0;
+  }
+  body .fruits .card .review .stars:before {
+    content: "\f005\f005\f005\f005\f005";
+    font-weight: 900;
+    font-style: normal;
+    line-height: 1;
+  }
+  body .fruits .card .review .stars.full {
+    width: 89%;
+    overflow: hidden;
+    max-width: 90px;
+    position: absolute;
+    z-index: 1;
+  }
+  body .fruits .card .review .stars.full:before {
+    color: yellow;
+  }
+  body .categories {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
