@@ -54,6 +54,7 @@
 
             .review {
                 @include review;
+                height: 16px;
 
                 p {
                     display: flex;
@@ -242,15 +243,35 @@
             display: flex;
             gap: 55px;
 
+            .titleimg,
+            .desktopmode {
+                width: 50%;
+            }
+
             .oneline {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
             }
 
+            .rev {
+                .review {
+                    width: 135px;
+                    height: 24px;
+
+                    .stars {
+                        font-size: 24px;
+
+                        &.full {
+                            max-width: 135px;
+                        }
+                    }
+                }
+            }
+
             img {
-                max-height: 730px;
-                width: auto;
+                height: auto;
+                width: 100%;
             }
 
             h2 {
@@ -281,21 +302,39 @@
             gap: 15px;
         }
 
-        .walloftext {
-            h3 {
-                font-family: 'Nunito Sans';
-                font-style: normal;
-                font-weight: 800;
-                font-size: 32px;
-                line-height: 36px;
-            }
+        main {
+            .walloftext {
+                h3 {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 32px;
+                    line-height: 36px;
+                }
 
-            p {
-                font-family: 'Nunito Sans';
-                font-style: normal;
-                font-weight: 800;
-                font-size: 32px;
-                line-height: 36px;
+                p {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 22px;
+                    line-height: 36px;
+                }
+
+                li {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 22px;
+                    line-height: 36px;
+                }
+
+                h5 {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 22px;
+                }
             }
         }
     }

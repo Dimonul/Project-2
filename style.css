@@ -101,10 +101,6 @@ section {
   display: block;
 }
 
-body {
-  line-height: 0;
-}
-
 ol,
 ul {
   list-style: none;
@@ -179,6 +175,7 @@ body * {
   display: inline-block;
   position: relative;
   width: 90px;
+  height: 16px;
 }
 .berries main .rev .review .stars {
   display: inline-block;
@@ -357,14 +354,28 @@ body * {
     display: flex;
     gap: 55px;
   }
+  .berries .desktop .titleimg,
+.berries .desktop .desktopmode {
+    width: 50%;
+  }
   .berries .desktop .oneline {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+  .berries .desktop .rev .review {
+    width: 135px;
+    height: 24px;
+  }
+  .berries .desktop .rev .review .stars {
+    font-size: 24px;
+  }
+  .berries .desktop .rev .review .stars.full {
+    max-width: 135px;
+  }
   .berries .desktop img {
-    max-height: 730px;
-    width: auto;
+    height: auto;
+    width: 100%;
   }
   .berries .desktop h2 {
     font-family: "Nunito Sans";
@@ -388,19 +399,33 @@ body * {
     align-items: flex-end;
     gap: 15px;
   }
-  .berries .walloftext h3 {
+  .berries main .walloftext h3 {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 800;
     font-size: 32px;
     line-height: 36px;
   }
-  .berries .walloftext p {
+  .berries main .walloftext p {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 800;
-    font-size: 32px;
+    font-size: 22px;
     line-height: 36px;
+  }
+  .berries main .walloftext li {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 36px;
+  }
+  .berries main .walloftext h5 {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 
@@ -785,6 +810,24 @@ main .pagination {
   }
   body .categories {
     grid-template-columns: repeat(4, 1fr);
+  }
+  footer .columns {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .columns h3 {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+  }
+  footer .columns li {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 @media screen and (min-width: 1350px) {
