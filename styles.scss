@@ -137,6 +137,7 @@ body * {
 }
 
 @import "./styles-berries";
+@import "./styles-404";
 
 body {
     font-family: 'Nunito Sans', sans-serif;
@@ -261,6 +262,11 @@ footer {
         display: none;
     }
 
+    a {
+        color: $link;
+
+    }
+
     h3 {
         padding-top: 15px;
         padding-bottom: 20px;
@@ -283,7 +289,6 @@ footer {
         line-height: 16px;
         letter-spacing: 0em;
         text-align: left;
-
     }
 
     .rights {
@@ -338,7 +343,7 @@ main {
 
             a {
                 position: relative;
-
+                color: $link;
             }
 
             img {
@@ -469,6 +474,10 @@ main {
         margin-bottom: 30px;
         margin-top: 30px;
 
+        a {
+            color: $link;
+        }
+
         .categoriescard {
             display: flex;
             flex-direction: column;
@@ -569,6 +578,20 @@ main {
     }
 
     footer {
+        .logo {
+            display: initial;
+            width: 100%;
+            padding-top: 25px;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+
+            img {
+                width: 100%;
+                max-width: 211px;
+            }
+        }
+
         .columns {
             display: flex;
             justify-content: space-between;
@@ -641,10 +664,14 @@ main {
         }
     }
 
-    body {
+    main {
         .container {
             padding-left: 40px;
             padding-right: 40px;
+        }
+
+        h2 {
+            justify-content: flex-start;
         }
 
         .selector {
@@ -657,6 +684,31 @@ main {
                 position: relative;
                 color: $gray2;
                 align-items: center;
+
+                h3 {
+                    padding-right: 10px;
+                }
+
+                .dropdown-content {
+                    display: flex;
+                    justify-content: center;
+                    padding: 0px;
+                    border: 1px solid #E8E8EA;
+                    border-radius: 12px;
+                    width: 63px;
+                    height: 32px;
+
+                    option {
+                        font-family: 'Nunito Sans';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 130%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
             }
         }
 
@@ -756,3 +808,6 @@ main {
 
     }
 }
+
+// ???? la butonul verde de pe carduri, pe Chrome e OK, pe Firefox nu
+//???????? Cum aplic stilizari pe dropdown??

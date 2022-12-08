@@ -132,8 +132,23 @@ body * {
   box-sizing: border-box;
 }
 
+.berries header {
+  background-color: #D9D9D9;
+}
 .berries header .container:nth-child(2) {
   display: none;
+}
+.berries main .homepage {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.berries main .homepage a {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  color: #646464;
 }
 .berries main .page {
   font-family: "Nunito Sans";
@@ -399,6 +414,25 @@ body * {
     align-items: flex-end;
     gap: 15px;
   }
+  .berries main .homepage {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .berries main .homepage a {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    color: #646464;
+  }
+  .berries main .desktop .discount p {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 135%;
+  }
   .berries main .walloftext h3 {
     font-family: "Nunito Sans";
     font-style: normal;
@@ -426,6 +460,86 @@ body * {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
+  }
+}
+
+.error main .errortext {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(Images/404fruits.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+}
+.error main .errortext h2 {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+  color: #F9F9F9;
+}
+.error main .errortext h3 {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  color: #F9F9F9;
+}
+.error main .errortext a {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  color: #059E67;
+}
+@media screen and (min-width: 500px) {
+  .error main .errortext {
+    height: 450px;
+  }
+  .error main .errortext h2 {
+    font-size: 50px;
+  }
+  .error main .errortext h3 {
+    font-size: 30px;
+  }
+  .error main .errortext a {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .error main .errortext {
+    height: 650px;
+  }
+  .error main .errortext h2 {
+    font-size: 70px;
+  }
+  .error main .errortext h3 {
+    font-size: 50px;
+  }
+  .error main .errortext a {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .error main .errortext {
+    height: 950px;
+  }
+  .error main .errortext h2 {
+    font-size: 50px;
+  }
+  .error main .errortext h3 {
+    font-size: 30px;
+  }
+  .error main .errortext a {
+    font-size: 30px;
   }
 }
 
@@ -532,6 +646,9 @@ footer {
 footer .logo {
   display: none;
 }
+footer a {
+  color: #1D1929;
+}
 footer h3 {
   padding-top: 15px;
   padding-bottom: 20px;
@@ -598,6 +715,7 @@ main .fruits .card span {
 }
 main .fruits .card a {
   position: relative;
+  color: #1D1929;
 }
 main .fruits .card img {
   width: 96px;
@@ -708,6 +826,9 @@ main .categories {
   margin-bottom: 30px;
   margin-top: 30px;
 }
+main .categories a {
+  color: #1D1929;
+}
 main .categories .categoriescard {
   display: flex;
   flex-direction: column;
@@ -811,6 +932,18 @@ main .pagination {
   body .categories {
     grid-template-columns: repeat(4, 1fr);
   }
+  footer .logo {
+    display: initial;
+    width: 100%;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  footer .logo img {
+    width: 100%;
+    max-width: 211px;
+  }
   footer .columns {
     display: flex;
     justify-content: space-between;
@@ -868,22 +1001,47 @@ main .pagination {
     padding: 0px;
     width: 383px;
   }
-  body .container {
+  main .container {
     padding-left: 40px;
     padding-right: 40px;
   }
-  body .selector {
+  main h2 {
+    justify-content: flex-start;
+  }
+  main .selector {
     display: flex;
     justify-content: space-between;
     color: #646464;
   }
-  body .selector .dropdown {
+  main .selector .dropdown {
     display: flex;
     position: relative;
     color: #646464;
     align-items: center;
   }
-  body .fruits {
+  main .selector .dropdown h3 {
+    padding-right: 10px;
+  }
+  main .selector .dropdown .dropdown-content {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    border: 1px solid #E8E8EA;
+    border-radius: 12px;
+    width: 63px;
+    height: 32px;
+  }
+  main .selector .dropdown .dropdown-content option {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 130%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .fruits {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -891,7 +1049,7 @@ main .pagination {
     width: 100%;
     margin-top: 30px;
   }
-  body .fruits .card {
+  main .fruits .card {
     flex: 1 0 23%;
     height: auto;
     display: flex;
@@ -900,29 +1058,29 @@ main .pagination {
     justify-content: center;
     align-items: center;
   }
-  body .fruits .card img {
+  main .fruits .card img {
     width: 100%;
     border-radius: 0;
     height: auto;
   }
-  body .fruits .card h4 {
+  main .fruits .card h4 {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
     line-height: 22px;
   }
-  body .fruits .card i.fa-solid.fa-bag-shopping {
+  main .fruits .card i.fa-solid.fa-bag-shopping {
     height: auto;
   }
-  body .fruits .card h5 {
+  main .fruits .card h5 {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 130%;
   }
-  body .fruits .card span {
+  main .fruits .card span {
     display: inline;
     font-family: "Nunito Sans";
     font-style: normal;
@@ -931,7 +1089,7 @@ main .pagination {
     line-height: 112%;
     color: #FFFFFF;
   }
-  body .fruits .card button {
+  main .fruits .card button {
     width: 100%;
     height: 48px;
     display: flex;
@@ -940,7 +1098,7 @@ main .pagination {
     flex-wrap: nowrap;
     align-items: center;
   }
-  body .pagination {
+  main .pagination {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -953,10 +1111,10 @@ main .pagination {
     font-size: 14px;
     line-height: 112%;
   }
-  body .pagination:hover {
+  main .pagination:hover {
     color: #00774C;
   }
-  body .categories {
+  main .categories {
     grid-template-columns: repeat(5, 1fr);
   }
 }

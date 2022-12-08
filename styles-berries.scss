@@ -1,5 +1,7 @@
 .berries {
     header {
+        background-color: $graybackround;
+
         .container:nth-child(2) {
             display: none;
         }
@@ -7,6 +9,19 @@
     }
 
     main {
+        .homepage {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            a {
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 130%;
+                color:$gray2;
+            }
+        }
+
         .page {
             font-family: 'Nunito Sans';
             font-style: normal;
@@ -248,6 +263,7 @@
                 width: 50%;
             }
 
+
             .oneline {
                 display: flex;
                 align-items: center;
@@ -303,6 +319,33 @@
         }
 
         main {
+            .homepage {
+                padding-top: 50px;
+                padding-bottom: 50px;
+
+                a {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 130%;
+                    color: $gray2;
+
+                }
+            }
+
+            .desktop {
+                .discount {
+                    p {
+                        font-family: 'Nunito Sans';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 135%;
+                    }
+                }
+            }
+
             .walloftext {
                 h3 {
                     font-family: 'Nunito Sans';
