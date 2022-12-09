@@ -158,6 +158,11 @@ a {
 }
 
 header {
+    .container:nth-child(1) {
+        background-color: $graybackround;
+        margin-bottom: 40px;
+    }
+
     .container:nth-child(2) {
         padding: 0px;
     }
@@ -347,8 +352,8 @@ main {
             }
 
             img {
-                width: 96px;
-                height: 96px;
+                width: 90px;
+                height: 90px;
                 border-radius: 50%;
             }
 
@@ -367,6 +372,7 @@ main {
                 background: #059E67;
                 border-radius: 12px;
                 border-style: none;
+                align-self: flex-end;
             }
 
             i.fa-solid.fa-bag-shopping {
@@ -385,7 +391,6 @@ main {
 
             h4 {
                 height: auto;
-                padding-left: 16px;
                 font-family: 'Nunito Sans';
                 font-style: normal;
                 font-weight: 700;
@@ -394,10 +399,8 @@ main {
             }
 
             h5 {
-                height: 16px;
                 color: $gray2;
-                padding-left: 16px;
-                padding-bottom: 50px;
+                padding-bottom: 35px;
                 font-family: 'Nunito Sans';
                 font-style: normal;
                 font-weight: 600;
@@ -406,7 +409,6 @@ main {
             }
 
             p {
-                padding-left: 16px;
                 font-family: 'Nunito Sans';
                 font-style: normal;
                 font-weight: 700;
@@ -416,7 +418,6 @@ main {
             }
 
             .sale {
-                height: 16px;
                 font-family: 'Nunito Sans';
                 font-style: normal;
                 font-weight: 600;
@@ -428,7 +429,7 @@ main {
                 letter-spacing: 0.03em;
                 order: 0;
                 background: $greenlime;
-                padding: 4px 8px;
+                padding: 4px 11px;
                 position: absolute;
                 border-radius: 10px;
                 top: 0;
@@ -615,6 +616,137 @@ main {
     }
 }
 
+@media screen AND (min-width: 1024px) {
+    header {
+        .container:nth-child(2) {
+            padding-left: 40px;
+            padding-right: 40px;
+            border-radius: 12px;
+        }
+
+        .logo {
+            justify-content: flex-start;
+        }
+
+        .search {
+            align-items: flex-start;
+            padding-bottom: 50px;
+            padding-left: 72px;
+            background-position: center;
+            background-color: $productbackround;
+            border-radius: 12px;
+            height: 232px;
+            background-image: url(Images/Search_Desktop.png);
+
+            h2 {
+                font-size: 24px;
+                font-weight: 800;
+                line-height: 32px;
+                letter-spacing: 0.01em;
+                text-align: center;
+                padding-top: 24px;
+            }
+
+            h4 {
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 147%;
+            }
+        }
+
+        .search-bar {
+            padding: 0px;
+            width: 383px;
+        }
+    }
+
+    .search {
+        align-items: flex-start;
+        padding-bottom: 50px;
+        padding-left: 72px;
+        background-position: center;
+        background-color: $productbackround;
+        border-radius: 12px;
+        height: 232px;
+        background-image: url(Images/Search_Desktop.png);
+
+        h2 {
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 32px;
+            letter-spacing: 0.01em;
+            text-align: center;
+            padding-top: 24px;
+        }
+
+        h4 {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 147%;
+        }
+    }
+
+    .search-bar {
+        padding: 0px;
+        width: 383px;
+    }
+}
+
+main {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    h2 {
+        justify-content: flex-start;
+    }
+
+    .selector {
+        display: flex;
+        justify-content: space-between;
+        color: $gray2;
+
+        .dropdown {
+            display: flex;
+            position: relative;
+            color: $gray2;
+            align-items: center;
+
+            h3 {
+                padding-right: 10px;
+            }
+
+            .dropdown-content {
+                text-align: center;
+
+                display: flex;
+                justify-content: center;
+                padding: 0px;
+                border: 1px solid #E8E8EA;
+                border-radius: 12px;
+                width: 63px;
+                height: 32px;
+
+                option {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 130%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
 @media screen AND (min-width: 1350px) {
 
 
@@ -693,6 +825,8 @@ main {
                     display: flex;
                     justify-content: center;
                     padding: 0px;
+                    text-align: center;
+
                     border: 1px solid #E8E8EA;
                     border-radius: 12px;
                     width: 63px;
@@ -731,6 +865,7 @@ main {
                 align-content: center;
                 justify-content: center;
                 align-items: center;
+                background-color: white;
 
                 img {
                     width: 100%;
@@ -809,5 +944,11 @@ main {
     }
 }
 
-// ???? la butonul verde de pe carduri, pe Chrome e OK, pe Firefox nu
 //???????? Cum aplic stilizari pe dropdown??
+
+// buton carduri pe mobile aliniat cu pretul
+//stilizare card preturi in drept cu stele + spatii
+//pe tableta spatii prea mari la carduri intre elemente
+//preturile taiate au font mai mic din carduri
+//background la stele trebuie sa fie gri nu negru
+//culoare text sa fie mai spre gri

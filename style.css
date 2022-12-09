@@ -560,6 +560,10 @@ a {
   text-decoration: none;
 }
 
+header .container:nth-child(1) {
+  background-color: #D9D9D9;
+  margin-bottom: 40px;
+}
 header .container:nth-child(2) {
   padding: 0px;
 }
@@ -718,8 +722,8 @@ main .fruits .card a {
   color: #1D1929;
 }
 main .fruits .card img {
-  width: 96px;
-  height: 96px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
 }
 main .fruits .card .review {
@@ -736,6 +740,7 @@ main .fruits .card button {
   background: #059E67;
   border-radius: 12px;
   border-style: none;
+  align-self: flex-end;
 }
 main .fruits .card i.fa-solid.fa-bag-shopping {
   width: 32px;
@@ -751,7 +756,6 @@ main .fruits .card .cardinfo {
 }
 main .fruits .card h4 {
   height: auto;
-  padding-left: 16px;
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 700;
@@ -759,10 +763,8 @@ main .fruits .card h4 {
   line-height: 116%;
 }
 main .fruits .card h5 {
-  height: 16px;
   color: #646464;
-  padding-left: 16px;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 600;
@@ -770,7 +772,6 @@ main .fruits .card h5 {
   line-height: 130%;
 }
 main .fruits .card p {
-  padding-left: 16px;
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 700;
@@ -778,7 +779,6 @@ main .fruits .card p {
   line-height: 135%;
 }
 main .fruits .card .sale {
-  height: 16px;
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 600;
@@ -790,7 +790,7 @@ main .fruits .card .sale {
   letter-spacing: 0.03em;
   order: 0;
   background: #F0FEE2;
-  padding: 4px 8px;
+  padding: 4px 11px;
   position: absolute;
   border-radius: 10px;
   top: 0;
@@ -963,6 +963,116 @@ main .pagination {
     line-height: 22px;
   }
 }
+@media screen and (min-width: 1024px) {
+  header .container:nth-child(2) {
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 12px;
+  }
+  header .logo {
+    justify-content: flex-start;
+  }
+  header .search {
+    align-items: flex-start;
+    padding-bottom: 50px;
+    padding-left: 72px;
+    background-position: center;
+    background-color: #F9F9F9;
+    border-radius: 12px;
+    height: 232px;
+    background-image: url(Images/Search_Desktop.png);
+  }
+  header .search h2 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    padding-top: 24px;
+  }
+  header .search h4 {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 147%;
+  }
+  header .search-bar {
+    padding: 0px;
+    width: 383px;
+  }
+  .search {
+    align-items: flex-start;
+    padding-bottom: 50px;
+    padding-left: 72px;
+    background-position: center;
+    background-color: #F9F9F9;
+    border-radius: 12px;
+    height: 232px;
+    background-image: url(Images/Search_Desktop.png);
+  }
+  .search h2 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    padding-top: 24px;
+  }
+  .search h4 {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 147%;
+  }
+  .search-bar {
+    padding: 0px;
+    width: 383px;
+  }
+}
+main .container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+main h2 {
+  justify-content: flex-start;
+}
+main .selector {
+  display: flex;
+  justify-content: space-between;
+  color: #646464;
+}
+main .selector .dropdown {
+  display: flex;
+  position: relative;
+  color: #646464;
+  align-items: center;
+}
+main .selector .dropdown h3 {
+  padding-right: 10px;
+}
+main .selector .dropdown .dropdown-content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  border: 1px solid #E8E8EA;
+  border-radius: 12px;
+  width: 63px;
+  height: 32px;
+}
+main .selector .dropdown .dropdown-content option {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 130%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (min-width: 1350px) {
   header .container:nth-child(2) {
     padding-left: 40px;
@@ -1026,6 +1136,7 @@ main .pagination {
     display: flex;
     justify-content: center;
     padding: 0px;
+    text-align: center;
     border: 1px solid #E8E8EA;
     border-radius: 12px;
     width: 63px;
@@ -1057,6 +1168,7 @@ main .pagination {
     align-content: center;
     justify-content: center;
     align-items: center;
+    background-color: white;
   }
   main .fruits .card img {
     width: 100%;
