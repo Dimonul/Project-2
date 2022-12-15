@@ -9,6 +9,9 @@
     }
 
     main {
+        p{
+            color:$link;
+        }
         .homepage {
             padding-top: 10px;
             padding-bottom: 10px;
@@ -319,6 +322,7 @@
         }
 
         main {
+            
             .homepage {
                 padding-top: 50px;
                 padding-bottom: 50px;
@@ -335,6 +339,7 @@
             }
 
             .desktop {
+              
                 .discount {
                     p {
                         font-family: 'Nunito Sans';

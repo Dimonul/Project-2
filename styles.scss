@@ -332,7 +332,6 @@ main {
 
         .card {
             width: 100%;
-            height: 128px;
             margin-bottom: 16px;
             padding-bottom: 10px;
             display: flex;
@@ -341,7 +340,7 @@ main {
             background: #F9F9F9;
             box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
             border-radius: 16px;
-
+            align-items: center;
             span {
                 display: none;
             }
@@ -373,6 +372,9 @@ main {
                 border-radius: 12px;
                 border-style: none;
                 align-self: flex-end;
+                position: absolute;
+                right: 26px;
+                margin-bottom: 6px;
             }
 
             i.fa-solid.fa-bag-shopping {
@@ -384,7 +386,6 @@ main {
             .cardinfo {
                 display: flex;
                 flex-direction: column;
-                height: 128px;
                 width: 100%;
                 white-space: normal;
             }
@@ -400,7 +401,7 @@ main {
 
             h5 {
                 color: $gray2;
-                padding-bottom: 35px;
+                padding-bottom: 12px;
                 font-family: 'Nunito Sans';
                 font-style: normal;
                 font-weight: 600;
@@ -450,7 +451,7 @@ main {
                     font-size: 20px;
                     line-height: 135%;
                     letter-spacing: 0.01em;
-
+                    padding-right: 6px;
                 }
 
                 :nth-child(2) {
@@ -461,6 +462,7 @@ main {
                     font-size: 16px;
                     line-height: 135%;
                     letter-spacing: 0.01em;
+                    padding-right: 10px;
 
                 }
             }
@@ -545,6 +547,24 @@ main {
                 justify-content: center;
                 align-items: center;
 
+                h4 {
+                    padding-bottom: 16px;
+
+                }
+
+                .cardinfo {
+                    p {
+                        display: flex;
+                        flex-direction: row-reverse;
+                    }
+                }
+
+                .discount {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                }
+
                 .review {
                     @include review;
                 }
@@ -562,7 +582,8 @@ main {
                     justify-content: center;
                     flex-wrap: nowrap;
                     align-items: center;
-                    margin-top: 20px;
+                    position: static;
+
                 }
 
                 span {
@@ -660,87 +681,91 @@ main {
             padding: 0px;
             width: 383px;
         }
-    }
 
-    .search {
-        align-items: flex-start;
-        padding-bottom: 50px;
-        padding-left: 72px;
-        background-position: center;
-        background-color: $productbackround;
-        border-radius: 12px;
-        height: 232px;
-        background-image: url(Images/Search_Desktop.png);
 
-        h2 {
-            font-size: 24px;
-            font-weight: 800;
-            line-height: 32px;
-            letter-spacing: 0.01em;
-            text-align: center;
-            padding-top: 24px;
-        }
+        .search {
+            align-items: flex-start;
+            padding-bottom: 50px;
+            padding-left: 72px;
+            background-position: center;
+            background-color: $productbackround;
+            border-radius: 12px;
+            height: 232px;
+            background-image: url(Images/Search_Desktop.png);
 
-        h4 {
-            font-family: 'Nunito Sans';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 147%;
-        }
-    }
-
-    .search-bar {
-        padding: 0px;
-        width: 383px;
-    }
-}
-
-main {
-    .container {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    h2 {
-        justify-content: flex-start;
-    }
-
-    .selector {
-        display: flex;
-        justify-content: space-between;
-        color: $gray2;
-
-        .dropdown {
-            display: flex;
-            position: relative;
-            color: $gray2;
-            align-items: center;
-
-            h3 {
-                padding-right: 10px;
+            h2 {
+                font-size: 24px;
+                font-weight: 800;
+                line-height: 32px;
+                letter-spacing: 0.01em;
+                text-align: center;
+                padding-top: 24px;
             }
 
-            .dropdown-content {
-                text-align: center;
+            h4 {
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 147%;
+            }
+        }
 
+        .search-bar {
+            padding: 0px;
+            width: 383px;
+        }
+
+    }
+
+    main {
+        .container {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        h2 {
+            justify-content: flex-start;
+        }
+
+
+
+        .selector {
+            display: flex;
+            justify-content: space-between;
+            color: $gray2;
+
+            .dropdown {
                 display: flex;
-                justify-content: center;
-                padding: 0px;
-                border: 1px solid #E8E8EA;
-                border-radius: 12px;
-                width: 63px;
-                height: 32px;
+                position: relative;
+                color: $gray2;
+                align-items: center;
 
-                option {
-                    font-family: 'Nunito Sans';
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 12px;
-                    line-height: 130%;
+                h3 {
+                    padding-right: 10px;
+                }
+
+                .dropdown-content {
+                    text-align: center;
+
                     display: flex;
                     justify-content: center;
-                    align-items: center;
+                    padding: 0px;
+                    border: 1px solid #E8E8EA;
+                    border-radius: 12px;
+                    width: 63px;
+                    height: 32px;
+
+                    option {
+                        font-family: 'Nunito Sans';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 130%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
                 }
             }
         }
@@ -944,11 +969,12 @@ main {
     }
 }
 
-//???????? Cum aplic stilizari pe dropdown??
 
-// buton carduri pe mobile aliniat cu pretul
-//stilizare card preturi in drept cu stele + spatii
-//pe tableta spatii prea mari la carduri intre elemente
-//preturile taiate au font mai mic din carduri
-//background la stele trebuie sa fie gri nu negru
-//culoare text sa fie mai spre gri
+// buton carduri pe mobile aliniat cu pretul ---- e mai bine asa? cand e foarte mic se suprapun
+
+//stilizare card preturi in drept cu stele + spatii   -- done
+//pe tableta spatii prea mari la carduri intre elemente  -- done
+//preturile taiate au font mai mic din carduri     -- done
+//background la stele trebuie sa fie gri nu negru  --done
+//culoare text sa fie mai spre gri   --done
+//loading screen la inceput
