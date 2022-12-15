@@ -157,6 +157,52 @@ a {
     text-decoration: none;
 }
 
+#hideMeAfter3Seconds {
+    animation: hideAnimation 0s ease-in 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hideAnimation {
+    to {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 50%;
+}
+
+.loading--full-height {
+    align-items: center;
+    height: 100%;
+}
+
+.loading::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 10px solid #dddddd;
+    border-top-color: #009579;
+    border-radius: 50%;
+    transform: rotate(0.16turn);
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
 header {
     .container:nth-child(1) {
         background-color: $graybackround;
@@ -211,8 +257,6 @@ header {
             color: $gray2;
             padding-bottom: 24px;
         }
-
-
     }
 
     .search-bar {
@@ -341,6 +385,7 @@ main {
             box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
             border-radius: 16px;
             align-items: center;
+
             span {
                 display: none;
             }
@@ -978,3 +1023,5 @@ main {
 //background la stele trebuie sa fie gri nu negru  --done
 //culoare text sa fie mai spre gri   --done
 //loading screen la inceput
+
+//mixin font 
