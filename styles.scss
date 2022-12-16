@@ -248,6 +248,7 @@ header {
         top: 0;
         left: 0;
         right: 0;
+        z-index: 1001;
         img {
             width: 100%;
             max-width: 211px;
@@ -610,7 +611,9 @@ h3{
             background: #F9F9F9;
             border-radius: 16px;
             text-decoration: none;
-
+            &:hover{
+            background-color: white;
+            }
         }
 
 

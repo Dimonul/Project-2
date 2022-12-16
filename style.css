@@ -644,6 +644,7 @@ header .logo {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1001;
 }
 header .logo img {
   width: 100%;
@@ -956,6 +957,9 @@ main .categories .categoriescard {
   background: #F9F9F9;
   border-radius: 16px;
   text-decoration: none;
+}
+main .categories .categoriescard:hover {
+  background-color: white;
 }
 main .categories img {
   width: 100%;
