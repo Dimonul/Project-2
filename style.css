@@ -126,6 +126,8 @@ table {
 
 html {
   width: 100%;
+  animation: bodynoscroll 0s ease-in 3s;
+  animation-fill-mode: backwards;
 }
 
 body * {
@@ -349,8 +351,6 @@ body * {
 }
 .berries main .walloftext ul {
   margin-bottom: 18px;
-  list-style-type: circle;
-  list-style: circle;
 }
 .berries main .walloftext li {
   font-family: "Nunito Sans";
@@ -358,11 +358,14 @@ body * {
   font-weight: 800;
   font-size: 16px;
   line-height: 18px;
-  display: flex;
   align-items: center;
   letter-spacing: 0.01em;
   color: #1D1929;
-  list-style-type: circle;
+  list-style-type: initial;
+}
+.berries main .walloftext li::before {
+  content: "";
+  color: #1D1929;
 }
 @media screen and (min-width: 700px) {
   .berries .container {
@@ -565,8 +568,18 @@ a {
 }
 
 #hideMeAfter3Seconds {
-  animation: hideAnimation 0s ease-in 5s;
+  animation: hideAnimation 0s ease-in 3s;
   animation-fill-mode: forwards;
+}
+#hideMeAfter3Seconds:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1000;
 }
 
 @keyframes hideAnimation {
@@ -579,8 +592,9 @@ a {
 .loading {
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   right: 50%;
+  transform: translateX(50%);
 }
 
 .loading--full-height {
@@ -607,6 +621,11 @@ a {
     transform: rotate(1turn);
   }
 }
+@keyframes bodynoscroll {
+  from, to {
+    overflow: hidden;
+  }
+}
 header .container:nth-child(1) {
   background-color: #D9D9D9;
   margin-bottom: 40px;
@@ -616,11 +635,15 @@ header .container:nth-child(2) {
 }
 header .logo {
   width: 100%;
-  padding-top: 25px;
+  padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 header .logo img {
   width: 100%;
@@ -637,6 +660,7 @@ header .search {
   background-position: center top;
   background-size: cover;
   padding-bottom: 150px;
+  margin-top: 70px;
 }
 header .search h2 {
   font-size: 24px;
@@ -676,15 +700,15 @@ header .search-bar input {
   width: 100%;
   height: 56px;
   border: 1px solid #E8E8EA;
-  border-radius: 18px 0 0 18px;
+  border-radius: 18px 18px 18px 18px;
   border-right: none;
 }
 header .search-bar button {
-  border-radius: 0 18px 18px 0;
-  height: 56px;
-  border: 1px solid #E8E8EA;
+  border: none;
   background-color: white;
   border-left: none;
+  position: relative;
+  right: 33px;
 }
 header .search-bar button img {
   padding-right: 10px;
@@ -740,11 +764,48 @@ main h2 {
   margin-bottom: 16px;
 }
 main .selector {
-  display: none;
+  display: flex;
+  justify-content: space-between;
+  color: #646464;
+  align-items: center;
+}
+main .selector h3 {
+  font-size: 10px;
+}
+main .selector .dropdown {
+  display: flex;
+  position: relative;
+  color: #646464;
+  align-items: center;
+}
+main .selector .dropdown h3 {
+  padding-right: 10px;
+  font-size: 10px;
+}
+main .selector .dropdown .dropdown-content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  border: 1px solid #E8E8EA;
+  border-radius: 12px;
+  width: 63px;
+  height: 32px;
+}
+main .selector .dropdown .dropdown-content option {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 130%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .fruits {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 }
 main .fruits .dropdown {
   display: none;
@@ -802,6 +863,10 @@ main .fruits .card .cardinfo {
   flex-direction: column;
   width: 100%;
   white-space: normal;
+}
+main .fruits .card .cardinfo .card-overlap {
+  display: flex;
+  justify-content: space-between;
 }
 main .fruits .card h4 {
   height: auto;
@@ -912,7 +977,23 @@ main .pagination {
 
 @media screen and (min-width: 700px) {
   header .search {
+    align-items: flex-start;
+    padding-bottom: 50px;
+    padding-left: 72px;
     background-position: center;
+    background-color: #F9F9F9;
+    border-radius: 12px;
+    height: 232px;
+    background-image: url(Images/Search_Desktop.png);
+  }
+  header .search .search-bar {
+    max-width: 600px;
+  }
+  body .selector h3 {
+    font-size: 12px;
+  }
+  body .selector .dropdown h3 {
+    font-size: 12px;
   }
   body .fruits {
     display: flex;
@@ -1035,6 +1116,7 @@ main .pagination {
   }
   header .logo {
     justify-content: flex-start;
+    background-color: #BCBCBC;
   }
   header .search {
     align-items: flex-start;

@@ -130,6 +130,9 @@ table {
 
 html {
     width: 100%;
+    animation: bodynoscroll 0s ease-in 3s;
+    animation-fill-mode: backwards;
+
 }
 
 body * {
@@ -142,6 +145,7 @@ body * {
 body {
     font-family: 'Nunito Sans', sans-serif;
     width: 100%;
+
 
     .container {
         padding-left: 16px;
@@ -158,8 +162,19 @@ a {
 }
 
 #hideMeAfter3Seconds {
-    animation: hideAnimation 0s ease-in 5s;
+    animation: hideAnimation 0s ease-in 3s;
     animation-fill-mode: forwards;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: 1000;
+    }
 }
 
 @keyframes hideAnimation {
@@ -173,8 +188,9 @@ a {
 .loading {
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     right: 50%;
+    transform: translateX(50%);
 }
 
 .loading--full-height {
@@ -203,6 +219,14 @@ a {
     }
 }
 
+@keyframes bodynoscroll {
+
+    from,
+    to {
+        overflow: hidden;
+    }
+}
+
 header {
     .container:nth-child(1) {
         background-color: $graybackround;
@@ -215,12 +239,15 @@ header {
 
     .logo {
         width: 100%;
-        padding-top: 25px;
+        padding-top: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
         padding-bottom: 20px;
-
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         img {
             width: 100%;
             max-width: 211px;
@@ -238,6 +265,7 @@ header {
         background-position: center top;
         background-size: cover;
         padding-bottom: 150px;
+        margin-top: 70px;
 
         h2 {
             font-size: 24px;
@@ -281,16 +309,16 @@ header {
             width: 100%;
             height: 56px;
             border: 1px solid #E8E8EA;
-            border-radius: 18px 0 0 18px;
+            border-radius: 18px 18px 18px 18px;
             border-right: none;
         }
 
         button {
-            border-radius: 0 18px 18px 0;
-            height: 56px;
-            border: 1px solid #E8E8EA;
+            border: none;
             background-color: white;
             border-left: none;
+            position: relative;
+            right:33px;
 
             img {
                 padding-right: 10px;
@@ -363,12 +391,53 @@ main {
     }
 
     .selector {
-        display: none;
+        display: flex;
+        justify-content: space-between;
+        color: $gray2;
+        align-items: center;
+h3{
+    font-size: 10px;
+}
+        .dropdown {
+            display: flex;
+            position: relative;
+            color: $gray2;
+            align-items: center;
+
+            h3 {
+                padding-right: 10px;
+                font-size: 10px;
+            }
+
+            .dropdown-content {
+                text-align: center;
+
+                display: flex;
+                justify-content: center;
+                padding: 0px;
+                border: 1px solid #E8E8EA;
+                border-radius: 12px;
+                width: 63px;
+                height: 32px;
+
+                option {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 130%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
     }
 
     .fruits {
         display: flex;
         flex-direction: column;
+        margin-top: 30px;
 
         .dropdown {
             display: none;
@@ -433,6 +502,10 @@ main {
                 flex-direction: column;
                 width: 100%;
                 white-space: normal;
+                .card-overlap{
+                    display: flex;
+                    justify-content: space-between;
+                }
             }
 
             h4 {
@@ -570,11 +643,31 @@ main {
 
     header {
         .search {
+            align-items: flex-start;
+            padding-bottom: 50px;
+            padding-left: 72px;
             background-position: center;
+            background-color: $productbackround;
+            border-radius: 12px;
+            height: 232px;
+            background-image: url(Images/Search_Desktop.png);
+            .search-bar{
+                max-width: 600px;
+            }
         }
     }
 
     body {
+        .selector{
+            h3{
+                font-size: 12px;
+            }
+            .dropdown{
+                h3{
+                    font-size: 12px;
+                }
+            }
+        }
         .fruits {
             display: flex;
             flex-wrap: wrap;
@@ -692,6 +785,7 @@ main {
 
         .logo {
             justify-content: flex-start;
+            background-color: $linkhover;
         }
 
         .search {
