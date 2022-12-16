@@ -645,6 +645,7 @@ header .logo {
   left: 0;
   right: 0;
   z-index: 1001;
+  background-color: #BCBCBC;
 }
 header .logo img {
   width: 100%;
@@ -976,7 +977,20 @@ main .categories p {
   text-decoration: none;
 }
 main .pagination {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px;
+  gap: 40px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 112%;
+}
+main .pagination:hover {
+  color: #00774C;
 }
 
 @media screen and (min-width: 700px) {
