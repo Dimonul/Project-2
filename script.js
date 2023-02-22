@@ -10,3 +10,21 @@ shop.addEventListener('click', () => {
     }
 
 })
+
+if (window.innerWidth < 1024){
+    //cod sub 1024
+    console.log("123");
+}
+else {
+    //cod peste 1024
+}
+
+window.onresize=function (){
+    if (window.innerWidth <1024){
+        //aici vine codul sub 1024
+        console.log("456");
+    }
+    else{
+        //cod peste 1024
+    }
+    };

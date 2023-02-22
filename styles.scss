@@ -130,13 +130,23 @@ table {
 
 html {
     width: 100%;
-    animation: bodynoscroll 0s ease-in 3s;
-    animation-fill-mode: backwards;
+    //animation: bodynoscroll 0s ease-in 3s;
+    //animation-fill-mode: backwards;
 
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 body * {
     box-sizing: border-box;
+    
 }
 
 @import "./styles-berries";
@@ -145,7 +155,9 @@ body * {
 body {
     font-family: 'Nunito Sans', sans-serif;
     width: 100%;
-
+    &.zeroscroll {
+        overflow: hidden;
+    }
 
     .container {
         padding-left: 16px;
@@ -278,7 +290,6 @@ header {
                 font-weight: 700;
                 font-size: 16px;
                 line-height: 24px;
-                margin-left: 40px;
 
                 &:hover,
                 &.active {
@@ -294,8 +305,7 @@ header {
                     font-size: 20px;
                     line-height: 24px;
                     color: black;
-                    padding: 25px;
-                    margin-right: 6px;
+                    padding: 20px;
                 }
 
                 &:nth-child(4) {
@@ -752,7 +762,7 @@ main {
     }
 
     body {
-
+       
         .selector {
             h3 {
                 font-size: 12px;
@@ -874,10 +884,11 @@ main {
 
 @media screen AND (min-width: 1024px) {
     body {
-        .zeroscroll {
-            overflow: hidden;
+       
+        &.zeroscroll {
+            overflow-y: scroll;
+            
         }
-
         header {
             .container:nth-child(2) {
                 padding-left: 40px;

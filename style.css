@@ -126,19 +126,25 @@ table {
 
 html {
   width: 100%;
-  animation: bodynoscroll 0s ease-in 3s;
-  animation-fill-mode: backwards;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 body * {
   box-sizing: border-box;
 }
 
-.berries header {
-  background-color: #D9D9D9;
-}
-.berries header .container:nth-child(2) {
-  display: none;
+.berries main {
+  margin-top: 72px;
 }
 .berries main p {
   color: #1D1929;
@@ -478,10 +484,6 @@ body * {
     align-items: flex-end;
     gap: 15px;
   }
-  .berries main .homepage {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
   .berries main .homepage a {
     font-family: "Nunito Sans";
     font-style: normal;
@@ -611,6 +613,9 @@ body {
   font-family: "Nunito Sans", sans-serif;
   width: 100%;
 }
+body.zeroscroll {
+  overflow: hidden;
+}
 body .container {
   padding-left: 16px;
   padding-right: 16px;
@@ -731,7 +736,6 @@ header .container:nth-child(1) .navbar nav li {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  margin-left: 40px;
 }
 header .container:nth-child(1) .navbar nav li:hover .submenu, header .container:nth-child(1) .navbar nav li.active .submenu {
   display: flex;
@@ -743,8 +747,7 @@ header .container:nth-child(1) .navbar nav li a {
   font-size: 20px;
   line-height: 24px;
   color: black;
-  padding: 25px;
-  margin-right: 6px;
+  padding: 20px;
 }
 header .container:nth-child(1) .navbar nav li:nth-child(4) a {
   color: #CA8383;
@@ -1240,8 +1243,8 @@ main .pagination:hover {
   }
 }
 @media screen and (min-width: 1024px) {
-  body .zeroscroll {
-    overflow: hidden;
+  body.zeroscroll {
+    overflow-y: scroll;
   }
   body header .container:nth-child(2) {
     padding-left: 40px;
