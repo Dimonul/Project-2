@@ -9,19 +9,21 @@
     }
 
     main {
-        p{
-            color:$link;
+        p {
+            color: $link;
         }
+
         .homepage {
             padding-top: 10px;
             padding-bottom: 10px;
+
             a {
                 font-family: 'Nunito Sans';
                 font-style: normal;
                 font-weight: 600;
                 font-size: 14px;
                 line-height: 130%;
-                color:$gray2;
+                color: $gray2;
             }
         }
 
@@ -204,6 +206,61 @@
         .walloftext {
             margin-top: 18px;
 
+            [data-tab-content] {
+                display: none;
+            }
+
+            .active[data-tab-content] {
+                display: block;
+            }
+
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            .tabs {
+                display: flex;
+                justify-content: flex-start;
+                list-style-type: initial;
+                margin: 0;
+                padding: 0;
+                border-top: 1px solid black;
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+                width: fit-content;
+            }
+
+            .tab {
+                cursor: pointer;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+                padding-right: 30px;
+                list-style: none;
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 26px;
+                line-height: 36px;
+                letter-spacing: 0.01em;
+                color: $redlight;
+                background-color:$linkhover;
+            }
+
+            .tab.active {
+                background-color: white;
+            }
+
+            .tab:hover {
+                background-color: white;
+            }
+
+            .tab-content {
+                padding-left: 35px;
+                border: 1px solid black;
+            }
+
             h3 {
                 font-family: 'Nunito Sans';
                 font-style: normal;
@@ -231,7 +288,7 @@
 
             ul {
                 margin-bottom: 18px;
-               
+
             }
 
             li {
@@ -244,10 +301,11 @@
                 letter-spacing: 0.01em;
                 color: $link;
                 list-style-type: initial;
-&::before{
-    content: "";
-    color:$link;
-}
+
+                &::before {
+                    content: "";
+                    color: $link;
+                }
             }
         }
     }
@@ -270,8 +328,19 @@
 
             .oneline {
                 display: flex;
-                align-items: center;
+                align-items: flex-end;
                 justify-content: space-between;
+
+                h5 {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 18px;
+                    line-height: 36px;
+                    color: $button;
+                    display: flex;
+                    justify-content: flex-end;
+                }
             }
 
             .rev {
@@ -323,7 +392,7 @@
         }
 
         main {
-            
+
             .homepage {
                 padding-top: 50px;
                 padding-bottom: 50px;
@@ -340,7 +409,7 @@
             }
 
             .desktop {
-              
+
                 .discount {
                     p {
                         font-family: 'Nunito Sans';
