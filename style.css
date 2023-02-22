@@ -568,7 +568,7 @@ a {
 }
 
 #hideMeAfter3Seconds {
-  animation: hideAnimation 0s ease-in 3s;
+  animation: hideAnimation 0s ease-in 0s;
   animation-fill-mode: forwards;
 }
 #hideMeAfter3Seconds:before {
@@ -629,22 +629,65 @@ a {
 header .container:nth-child(1) {
   background-color: #D9D9D9;
   margin-bottom: 40px;
+  background-color: #BCBCBC;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  flex-wrap: nowrap;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+}
+header .container:nth-child(1) nav {
+  padding-left: 40px;
+}
+header .container:nth-child(1) nav .submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #F9F9F9;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+}
+header .container:nth-child(1) nav .submenu li {
+  padding: 0;
+}
+header .container:nth-child(1) nav li {
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+header .container:nth-child(1) nav li:hover .submenu, header .container:nth-child(1) nav li.active .submenu {
+  display: flex;
+}
+header .container:nth-child(1) nav li a {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: black;
+  padding: 25px;
+  margin-right: 6px;
+}
+header .container:nth-child(1) nav li:nth-child(4) a {
+  color: #CA8383;
 }
 header .container:nth-child(2) {
   padding: 0px;
 }
 header .logo {
-  width: 100%;
   padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1001;
   background-color: #BCBCBC;
 }
 header .logo img {
@@ -1127,16 +1170,19 @@ main .pagination:hover {
   }
 }
 @media screen and (min-width: 1024px) {
-  header .container:nth-child(2) {
+  body .zeroscroll {
+    overflow: hidden;
+  }
+  body header .container:nth-child(2) {
     padding-left: 40px;
     padding-right: 40px;
     border-radius: 12px;
   }
-  header .logo {
+  body header .logo {
     justify-content: flex-start;
     background-color: #BCBCBC;
   }
-  header .search {
+  body header .search {
     align-items: flex-start;
     padding-bottom: 50px;
     padding-left: 72px;
@@ -1146,7 +1192,7 @@ main .pagination:hover {
     height: 232px;
     background-image: url(Images/Search_Desktop.png);
   }
-  header .search h2 {
+  body header .search h2 {
     font-size: 24px;
     font-weight: 800;
     line-height: 32px;
@@ -1154,18 +1200,18 @@ main .pagination:hover {
     text-align: center;
     padding-top: 24px;
   }
-  header .search h4 {
+  body header .search h4 {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 147%;
   }
-  header .search-bar {
+  body header .search-bar {
     padding: 0px;
     width: 383px;
   }
-  header .search {
+  body header .search {
     align-items: flex-start;
     padding-bottom: 50px;
     padding-left: 72px;
@@ -1175,7 +1221,7 @@ main .pagination:hover {
     height: 232px;
     background-image: url(Images/Search_Desktop.png);
   }
-  header .search h2 {
+  body header .search h2 {
     font-size: 24px;
     font-weight: 800;
     line-height: 32px;
@@ -1183,39 +1229,39 @@ main .pagination:hover {
     text-align: center;
     padding-top: 24px;
   }
-  header .search h4 {
+  body header .search h4 {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 147%;
   }
-  header .search-bar {
+  body header .search-bar {
     padding: 0px;
     width: 383px;
   }
-  main .container {
+  body main .container {
     padding-left: 40px;
     padding-right: 40px;
   }
-  main h2 {
+  body main h2 {
     justify-content: flex-start;
   }
-  main .selector {
+  body main .selector {
     display: flex;
     justify-content: space-between;
     color: #646464;
   }
-  main .selector .dropdown {
+  body main .selector .dropdown {
     display: flex;
     position: relative;
     color: #646464;
     align-items: center;
   }
-  main .selector .dropdown h3 {
+  body main .selector .dropdown h3 {
     padding-right: 10px;
   }
-  main .selector .dropdown .dropdown-content {
+  body main .selector .dropdown .dropdown-content {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1225,7 +1271,7 @@ main .pagination:hover {
     width: 63px;
     height: 32px;
   }
-  main .selector .dropdown .dropdown-content option {
+  body main .selector .dropdown .dropdown-content option {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 700;
