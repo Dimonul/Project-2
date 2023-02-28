@@ -28,3 +28,10 @@ window.onresize=function (){
         //cod peste 1024
     }
     };
+
+    function showMenu (){
+        document.querySelector(".navigation").classList.toggle("active");
+        document.querySelector(".fa-bars").classList.toggle("hide");
+        document.querySelector(".fa-x").classList.toggle("show");
+
+    }
