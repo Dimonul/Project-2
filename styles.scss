@@ -1,5 +1,7 @@
 @import "./variables";
 @import "./mixins";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 
 html,
@@ -281,11 +283,10 @@ header {
             // padding-left: 40px;
             // padding-right: 40px;
             line-height: 12px;
-            li {
-          
-            }
 
-          
+            li {}
+
+
         }
 
         li {
@@ -297,6 +298,7 @@ header {
             font-size: 16px;
             line-height: 24px;
             padding-top: 20px;
+
             &:hover,
             &.active {
                 .submenu {
@@ -313,10 +315,10 @@ header {
                 color: black;
             }
 
-            &:nth-child(4) {
-                a {
-                    color: $redlight;
-                }
+            .sale {
+
+                color: $redlight;
+
             }
         }
 
@@ -339,78 +341,87 @@ header {
             display: flex;
         }
     }
-.navbar{
-    .navigation {
-        display: none;
 
-        &.active {
-            display: block;
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: scroll;
-
-            ul {
-                display: flex;
-                              width: 100%;
-                height: 100%;
-                background: $linkhover;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-
-            li {
-        //        padding-bottom: 40px;
-
-                a {
-                    font-size: 40px;
-                    display: flex;
-                    justify-content: center;
-                    padding-top: 10px;
-                }
-            }
-
-            nav {
-                display: block;
-            }
-            .submenu {
-                position: relative;
-                left: 0;
-                top: 2%;
-                background: #F9F9F9;
-                line-height: 12px;               
-                li{
-                    padding-top: 0;
-                }
-                a{
-                    font-size: 22px;
-                }
-            }
-            .readrecipes{
-                display: none;
-            }
-        }
-        .shop{
-            .submenu{
+    .navbar {
+        .navigation {
             display: none;
 
-            li{
-                font-size: 25px;
+            &.active {
+                display: block;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: scroll;
 
+                ul {
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    background: $linkhover;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+
+                li {
+                    //        padding-bottom: 40px;
+
+                    a {
+                        font-size: 40px;
+                        display: flex;
+                        justify-content: center;
+                        padding-top: 10px;
+                    }
+                }
+
+                nav {
+                    display: block;
+                }
+
+                .submenu {
+                    position: relative;
+                    left: 0;
+                    top: 2%;
+                    background: #F9F9F9;
+                    line-height: 12px;
+
+                    li {
+                        padding-top: 0;
+                    }
+
+                    a {
+                        font-size: 22px;
+                    }
+                }
+
+                .readrecipes {
+                    display: none;
+                }
             }
-            }
-            &.active{
-                .submenu{
-display: flex;
-    justify-content: center;                }
+
+            .shop {
+                .submenu {
+                    display: none;
+
+                    li {
+                        font-size: 25px;
+
+                    }
+                }
+
+                &.active {
+                    .submenu {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 22px;
+                    }
+                }
             }
         }
     }
-}
 
 
 }
@@ -740,34 +751,34 @@ main {
 
             }
 
-            .discount {
-                display: flex;
-                align-items: center;
-                height: 24px;
+            // .discount {
+            //     display: flex;
+            //     align-items: center;
+            //     height: 24px;
 
-                :nth-child(1) {
-                    color: $redlight;
-                    font-family: 'Nunito Sans';
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 20px;
-                    line-height: 135%;
-                    letter-spacing: 0.01em;
-                    padding-right: 6px;
-                }
+            //     :nth-child(1) {
+            //         color: $redlight;
+            //         font-family: 'Nunito Sans';
+            //         font-style: normal;
+            //         font-weight: 700;
+            //         font-size: 20px;
+            //         line-height: 135%;
+            //         letter-spacing: 0.01em;
+            //         padding-right: 6px;
+            //     }
 
-                :nth-child(2) {
-                    text-decoration: line-through;
-                    font-family: 'Nunito Sans';
-                    font-style: normal;
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 135%;
-                    letter-spacing: 0.01em;
-                    padding-right: 10px;
+            //     :nth-child(2) {
+            //         text-decoration: line-through;
+            //         font-family: 'Nunito Sans';
+            //         font-style: normal;
+            //         font-weight: 700;
+            //         font-size: 16px;
+            //         line-height: 135%;
+            //         letter-spacing: 0.01em;
+            //         padding-right: 10px;
 
-                }
-            }
+            //     }
+            // }
 
         }
     }
@@ -839,6 +850,46 @@ main {
 
         }
     }
+
+    .glide__track {
+        margin-bottom: 20px;
+
+        .glide__slides {
+
+            .glide__slide {
+                background: $productbackround;
+                border-radius: 16px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                &:hover {
+                    background: #FFFFFF;
+                    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+                }
+
+                a {
+                    display: flex;
+                    user-select: none;
+                    flex-direction: column;
+                    align-items: center;
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 147%;
+                    color: #1D1929;
+                }
+
+
+                img {
+                    height: 120px;
+                    width: 120px;
+                }
+            }
+        }
+    }
+
+
 }
 
 @media screen and (min-width: 700px) {
@@ -862,22 +913,27 @@ main {
                 .navigation {
                     display: block;
                 }
-                li{
+
+                li {
                     padding-top: 0;
                     padding-right: 40px;
                 }
-                .submenu{
-                    li{
+
+                .submenu {
+                    li {
                         padding-left: 40px;
                     }
-                    ul{
+
+                    ul {
                         margin-top: 25px;
                         margin-bottom: 25px;
                     }
-                    img{
+
+                    img {
                         padding: 30px;
                     }
                 }
+
                 nav {
                     padding-left: 40px;
 
@@ -987,9 +1043,7 @@ main {
             }
         }
 
-        .categories {
-            grid-template-columns: repeat(4, 1fr);
-        }
+        .glide {}
     }
 
     footer {
@@ -1363,9 +1417,7 @@ main {
             }
         }
 
-        .categories {
-            grid-template-columns: repeat(5, 1fr);
-        }
+
 
 
     }

@@ -13,6 +13,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"> -->
+    <!-- <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"> -->
+
 </head>
 
 <body>
@@ -23,7 +27,7 @@
     <header>
         <div class="container extra-css">
             <div class="togglebox">
-                <a onclick = "showMenu()" href="#"><i class="fa-solid fa-bars"></i><i class="fa-solid fa-x"></i></a>
+                <a onclick="showMenu()" href="#"><i class="fa-solid fa-bars"></i><i class="fa-solid fa-x"></i></a>
             </div>
             <div class="logo">
                 <a href="#">
@@ -31,28 +35,29 @@
                 </a>
             </div>
             <div class="navbar">
-            <nav class="navigation">
-                <ul>
-                    <li class="shop"><a href="#">Shop</a>
-                        <div class="submenu">
-                        <ul>
-                     
-                        </ul>
-                        <a class="readrecipes" href="#"><img src="Images/readrecipes.png" alt="Read Recipes"></a>
-                        </div>
-                    </li>
-                    <li><a href="404.html">About us</a></li>
-                    <li><a href="404.html">Contact</a></li>
-                    <li><a href="404.html">Sale</a></li>
-                </ul>
-            </nav>
+                <nav class="navigation">
+                    <ul>
+                        <li class="shop"><a href="#">Shop</a>
+                            <div class="submenu">
+                                <ul>
 
-           
+                                </ul>
+                                <a class="readrecipes" href="#"><img src="Images/readrecipes.png"
+                                        alt="Read Recipes"></a>
+                            </div>
+                        </li>
+                        <li><a href="404.html">About us</a></li>
+                        <li><a href="404.html">Contact</a></li>
+                        <li><a class="sale" href="404.html">Sale</a></li>
+                    </ul>
+                </nav>
+
+
             </div>
-        <div class="shoppingcart">
-            <i class="fa-solid fa-cart-shopping"></i>
-        </div>
-            
+            <div class="shoppingcart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
         </div>
         <div class="container">
             <div class="search">
@@ -83,211 +88,7 @@
                 </div>
             </div>
             <div class="fruits">
-
-                <div class="card">
-                    <img src="Images/products/strawberry-big.jpg" alt="strawberries">
-                    <div class="cardinfo">
-                        <h4>Strawberries</h4>
-                        <h5>200g</h5>
-                        <div class="review">
-                            <i class="stars"></i>
-                            <i class="stars full" style="width: 80%;"></i>
-                        </div>
-                        <p>$4.99</p>
-
-                    </div>
-
-                    <button type=submit><span>Add to cart</span><i class="fa-solid fa-bag-shopping"></i></button>
-
-                </div>
-                <div class="card">
-                    <img src="Images/products/mandarine-big.jpg" alt="mandarine">
-                    <div class="cardinfo">
-                        <h4>Clementines (Mandarins)</h4>
-                        <h5>1kg</h5>
-                        <div class="review">
-                            <i class="stars"></i>
-                            <i class="stars full" style="width: 60%;"></i>
-                        </div>
-                        <p>$15.25</p>
-
-
-                    </div>
-                    <button type=submit><span>Add to cart</span><i class="fa-solid fa-bag-shopping"></i></button>
-
-                </div>
-                <div class="card">
-                    <img src="Images/products/banana-big.jpg" alt="bananas">
-                    <div class="cardinfo">
-                        <h4>Bananas</h4>
-                        <h5>1kg</h5>
-                        <div class="review">
-                            <i class="stars"></i>
-                            <i class="stars full" style="width: 80%;"></i>
-                        </div>
-                        <p>$14</p>
-                    </div>
-
-                    <button type=submit><span>Add to cart</span><i class="fa-solid fa-bag-shopping"></i></button>
-
-                </div>
-                <div class="card">
-                    <a href="berries.html"><img src="Images/products/berries-big.jpg" alt="Berries"><span
-                            class="sale">Sale</span></a>
-                    <div class="cardinfo">
-                        <a href="berries.html">
-                            <h4>Berries (Mix)</h4>
-                        </a>
-                        <h5>500g</h5>
-                        <div class="card-overlap">
-                            <div class="review">
-                                <i class="stars"></i>
-                                <i class="stars full" style="width: 80%;"></i>
-                            </div>
-                            <div class="discount">
-                                <p>$7.99</p>
-                                <p>$9.99</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type=submit><span>Add to cart</span><i class="fa-solid fa-bag-shopping"></i></button>
-
-                </div>
-                <div class="card">
-                    <img src="Images/products/mango-big.jpg" alt="mango">
-                    <div class="cardinfo">
-                        <h4>Mango</h4>
-                        <h5>1pc</h5>
-                        <div class="review">
-                            <i class="stars"></i>
-                            <i class="stars full" style="width: 100%;"></i>
-                        </div>
-                        <p>$5</p>
-                    </div>
-
-                    <button type=submit><span>Add to cart</span><i class="fa-solid fa-bag-shopping"></i></button>
-
-                </div>
-                <div class="card">
-                    <img src="Images/products/apples-big.jpg" alt="apples">
-                    <div class="cardinfo">
-                        <h4>Apples</h4>
-                        <h5>1.5kg</h5>
-                        <div class="review">
-                            <i class="stars"></i>
-                            <i class="stars full" style="width: 80%;"></i>
-                        </div>
-                        <p>$13.50</p>
-                    </div>
-
-                    <button type=submit><span>Add to cart</span><i class="fa-solid fa-bag-shopping"></i></button>
-
-                </div>
-                <div class="card">
-                    <img src="Images/products/pineapple-big.jpg" alt="pineapple">
-                    <div class="cardinfo">
-                        <h4>Pineapple</h4>
-                        <h5>1pc</h5>
-                        <div class="review">
-                            <i class="stars"></i>
-                            <i class="stars full" style="width: 80%;"></i>
-                        </div>
-                        <p>$9.99</p>
-                    </div>
-
-                    <button type=submit><span>Add to cart</span><i class="fa-solid fa-bag-shopping"></i></button>
-
-                </div>
-                <div class="card">
-                    <img src="Images/products/oranges-big.jpg" alt="oranges">
-                    <div class="cardinfo">
-                        <h4>Oranges</h4>
-                        <h5>1.5kg</h5>
-                        <div class="review">
-                            <i class="stars"></i>
-                            <i class="stars full" style="width: 80%;"></i>
-                        </div>
-                        <p>$11.99</p>
-                    </div>
-
-                    <button type=submit><span>Add to cart</span><i class="fa-solid fa-bag-shopping"></i></button>
-
-                </div>
-                <div class="card">
-                    <a href="product.html"><img src="Images/products/green-apple-big.jpg" alt="Green apples"><span
-                            class="sale">Sale</span></a>
-                    <div class="cardinfo">
-                        <h4>Green Apples</h4>
-                        <h5>1kg</h5>
-                        <div class="card-overlap">
-
-                            <div class="review">
-                                <i class="stars"></i>
-                                <i class="stars full" style="width: 100%;"></i>
-                            </div>
-                            <div class="discount">
-                                <p>$9.99</p>
-                                <p>$12.99</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type=submit><span>Add to cart</span><i class="fa-solid fa-bag-shopping"></i></button>
-
-                </div>
-                <div class="card">
-                    <img src="Images/products/kiwi-big.jpg" alt="Kiwi">
-                    <div class="cardinfo">
-                        <h4>Kiwi</h4>
-                        <h5>500g</h5>
-                        <div class="review">
-                            <i class="stars"></i>
-                            <i class="stars full" style="width: 80%;"></i>
-                        </div>
-                        <p>$5</p>
-                    </div>
-
-                    <button type=submit><span>Add to cart</span><i class="fa-solid fa-bag-shopping"></i></button>
-
-                </div>
-                <div class="card">
-                    <img src="Images/products/papaya-big.jpg" alt="papaya">
-                    <div class="cardinfo">
-                        <h4>Papaya</h4>
-                        <h5>2 pc pkg</h5>
-                        <div class="review">
-                            <i class="stars"></i>
-                            <i class="stars full" style="width: 80%;"></i>
-                        </div>
-                        <p>$7.50</p>
-                    </div>
-
-                    <button type=submit><span>Add to cart</span><i class="fa-solid fa-bag-shopping"></i></button>
-
-                </div>
-                <div class="card">
-                    <a href="product.html"> <img src="Images/products/grapes-big.jpg" alt="Grapes"><span
-                            class="sale">Sale</span></a>
-                    <div class="cardinfo">
-                        <h4>Grapes</h4>
-                        <h5>1kg</h5>
-                        <div class="card-overlap">
-
-                            <div class="review">
-                                <i class="stars"></i>
-                                <i class="stars full" style="width: 80%;"></i>
-                            </div>
-                            <div class="discount">
-                                <p>$7.99</p>
-                                <p>$12.99</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type=submit><span>Add to cart</span><i class="fa-solid fa-bag-shopping"></i></button>
-
-                </div>
+                
             </div>
             <div class="pagination">
                 <a href="#" class="fa-solid fa-chevron-left"></a>
@@ -299,47 +100,19 @@
             <div class="container">
                 <h2>Categories</h2>
 
-                <div class="categories">
-                    <!-- <a href="#" class="categoriescard">
-                        <img src="Images/categories/apple.png" alt="Apple">
-                        <p>Fruits</p>
-                    </a>
-                    <a href="#" class="categoriescard">
-                        <img src="Images/categories/strawberry.png" alt="Strawberries">
-                        <p>Berries</p>
-                    </a>
-                    <a href="#" class="categoriescard">
-                        <img src="Images/categories/carrot.png" alt="Carrot">
-                        <p>Vegetables</p>
-                    </a>
-                    <a href="#" class="categoriescard">
-                        <img src="Images/categories/meat.png" alt="Meat">
-                        <p>Meat</p>
-                    </a>
-                    <a href="#" class="categoriescard">
-                        <img src="Images/categories/chicken.png" alt="Chicken">
-                        <p>Chicken</p>
-                    </a>
-                    <a href="#" class="categoriescard">
-                        <img src="Images/categories/fish.png" alt="Fish">
-                        <p>Fish</p>
-                    </a>
-                    <a href="#" class="categoriescard">
-                        <img src="Images/categories/seafood.png" alt="Seafood">
-                        <p>Seafood</p>
-                    </a>
-                    <a href="#" class="categoriescard">
-                        <img src="Images/categories/cheese.png" alt="Cheese">
-                        <p>Cheese</p>
-                    </a>
-                    <a href="#" class="categoriescard">
-                        <img src="Images/categories/bread.png" alt="Bread">
-                        <p>Bread</p>
-                    </a>
-                    <a href="#" class="categoriescard">
-                        <img src="Images/categories/sweets.png" alt="Sweets">
-                        <p>Sweets</p>
-                    </a> -->
+                <div class="glide">
+
+                    <div class="glide__track" data-glide-el="track">
+
+                        <ul class="glide__slides">
+
+                        </ul>
+                    </div>
+
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+                    </div>
                 </div>
             </div>
 
@@ -383,7 +156,14 @@
             </div>
         </div>
     </footer>
-<script src="script.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+    <script src="script.js"></script>
+    <script src="script-listing.js"></script>
+
+
+
+
 </body>
 
 </html>

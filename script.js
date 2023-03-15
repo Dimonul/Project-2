@@ -1,3 +1,5 @@
+
+
 function getCategories(categoryId) {
     fetch('https://magento-demo.tk/rest/V1/curs/categorii/' + categoryId, { method: 'GET' })
     .then((response) => response.json())
@@ -6,9 +8,28 @@ sessionStorage.setItem('categorii', JSON.stringify(result));
     })
 
 };
+
+
 if (!sessionStorage.getItem('categorii')){  //daca nu exista categorii luate de pe server, se executa getCategories 56
 getCategories(56);
 }
+
+
+
+function getProducts(categoryId) {
+    fetch('https://magento-demo.tk/rest/V1/curs/produse/' + categoryId, { method: 'GET' })
+    .then((response) => response.json())
+    .then((result) =>{
+sessionStorage.setItem('products', JSON.stringify(result));
+    })
+
+};
+
+
+if (!sessionStorage.getItem('products')){  //daca nu exista categorii luate de pe server, se executa getCategories 56
+getProducts(56);
+}
+
 
 function categoriesHeader (){
     let meniu='';
@@ -23,18 +44,6 @@ function categoriesHeader (){
 categoriesHeader();
 
 
-function categoriesSlider (){
-    let slide='';
-    let categorii=JSON.parse(sessionStorage.getItem('categorii'));  
-    if (categorii){
-        categorii.forEach(function (categorie){
-    slide += '<li><a href="?categoryId='+categorie.id+'"><img src="https://magento-demo.tk/'+categorie.imageUrl+'">'+categorie.name+' </a></li>';
-        });
-        document.querySelector('.categories').innerHTML=slide;
-    }
-}
-
-categoriesSlider();
 const shop = document.querySelector('.shop');
 
 shop.addEventListener('click', () => {
@@ -48,23 +57,23 @@ shop.addEventListener('click', () => {
 
 })
 
-if (window.innerWidth < 1024) {
-    //cod sub 1024
-    console.log("123");
-}
-else {
-    //cod peste 1024
-}
+// if (window.innerWidth < 1024) {
+//     //cod sub 1024
+//     console.log("123");
+// }
+// else {
+//     //cod peste 1024
+// }
 
-window.onresize = function () {
-    if (window.innerWidth < 1024) {
-        //aici vine codul sub 1024
-        console.log("456");
-    }
-    else {
-        //cod peste 1024
-    }
-};
+// window.onresize = function () {
+//     if (window.innerWidth < 1024) {
+//         //aici vine codul sub 1024
+//         console.log("456");
+//     }
+//     else {
+//         //cod peste 1024
+//     }
+// };
 
 function showMenu() {
     document.querySelector(".navigation").classList.toggle("active");
@@ -72,3 +81,4 @@ function showMenu() {
     document.querySelector(".fa-x").classList.toggle("show");
 
 }
+ 
