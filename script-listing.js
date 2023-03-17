@@ -40,6 +40,7 @@ new Glide('.glide', {
 function productsHtml() {
     let productTemplate = '';
     let products = JSON.parse(sessionStorage.getItem('products'));
+
     if (products) {
         products.forEach(function (product) {
             console.log(product);
@@ -63,10 +64,13 @@ function productsHtml() {
                 '</div>'+
                 '</div>';
         });
+        
         document.querySelector('.fruits').innerHTML = productTemplate;
     }
 }
 productsHtml();
+
+
    // <span
     //         class="sale">Sale</span>
 
