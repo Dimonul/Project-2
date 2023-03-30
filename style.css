@@ -1240,6 +1240,33 @@ main .fruits .card .sale {
   top: 0;
   color: #1D1929;
 }
+main .fruits .card .price {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+main .fruits .card .price .finalprice {
+  color: #CA8383;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 135%;
+  letter-spacing: 0.01em;
+  padding-right: 6px;
+}
+main .fruits .card .price .finalprice + .normalprice {
+  text-decoration: line-through;
+  font-size: 16px;
+}
+main .fruits .card .price .normalprice {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 135%;
+  letter-spacing: 0.01em;
+}
 main .categories {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
