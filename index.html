@@ -73,7 +73,7 @@
         </div>
     </header>
     <main>
-        <div class="container">
+        <div class="container" id="fruitlist">
             <h2>Fruits</h2>
             <div class="selector">
                 <h3>Showing 1 - 12 of 48 products</h3>
@@ -81,23 +81,25 @@
                 <div class="dropdown">
                     <h3>Items per page</h3>
                     <select class="dropdown-content">
+                        <option>4</option>
                         <option>12</option>
                         <option>24</option>
                         <option>36</option>
                     </select>
                 </div>
             </div>
-            <div class="fruits">
-                
+
+            <ul class="fruits list" >
+
+            </ul>
+            <div class="test">
+            <a href="#" class="fa-solid fa-chevron-left"></a>
+
+            <ul class="pagination"></ul>
+
+            <a href="#" class="fa-solid fa-chevron-right"></a>
             </div>
-            <div class="pagination">
-                <a href="#" class="fa-solid fa-chevron-left"></a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#" class="fa-solid fa-chevron-right"></a>
-            </div>
-            <div class="container">
+            <div class="glider">
                 <h2>Categories</h2>
 
                 <div class="glide">
@@ -110,8 +112,8 @@
                     </div>
 
                     <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
-                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fa-solid fa-circle-chevron-left"></i></button>
+                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fa-solid fa-circle-chevron-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -156,8 +158,9 @@
             </div>
         </div>
     </footer>
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
+
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script src="script.js"></script>
     <script src="script-listing.js"></script>
 

@@ -65,13 +65,14 @@
   background-color: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 4px;
-  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
   text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
   opacity: 1;
   cursor: pointer;
   transition: opacity 150ms ease, border 300ms ease-in-out;
   transform: translateY(-50%);
   line-height: 1;
+  color: #059E67;
+  height: 100%;
 }
 .glide__arrow:focus {
   outline: none;
@@ -80,10 +81,20 @@
   border-color: white;
 }
 .glide__arrow--left {
-  left: 2em;
+  left: -4em;
+}
+@media screen and (max-width: 700px) {
+  .glide__arrow--left {
+    left: 0;
+  }
 }
 .glide__arrow--right {
-  right: 2em;
+  right: -4em;
+}
+@media screen and (max-width: 700px) {
+  .glide__arrow--right {
+    right: 0;
+  }
 }
 .glide__arrow--disabled {
   opacity: 0.33;
@@ -1306,22 +1317,6 @@ main .categories p {
   line-height: 147%;
   text-decoration: none;
 }
-main .pagination {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 16px;
-  gap: 40px;
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 112%;
-}
-main .pagination:hover {
-  color: #00774C;
-}
 main .glide__track {
   margin-bottom: 20px;
 }
@@ -1418,7 +1413,9 @@ main .glide__track .glide__slides .glide__slide img {
     margin-top: 30px;
   }
   body .fruits .card {
-    flex: 1 0 23%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 23%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -1488,37 +1485,48 @@ main .glide__track .glide__slides .glide__slide img {
     line-height: 112%;
     color: #FFFFFF;
   }
-  footer .logo {
-    display: initial;
-    width: 100%;
-    padding-top: 25px;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
+  .glider {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  footer .logo img {
-    width: 100%;
-    max-width: 211px;
+  .glider .glide__arrows .fa-circle-chevron-left {
+    font-size: 20px;
   }
-  footer .columns {
-    display: flex;
-    justify-content: space-between;
-  }
-  footer .columns h3 {
-    font-family: "Nunito Sans";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 24px;
-  }
-  footer .columns li {
-    font-family: "Nunito Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+  .glider .glide__arrows .fa-circle-chevron-right {
+    font-size: 20px;
   }
 }
+footer .logo {
+  display: initial;
+  width: 100%;
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+footer .logo img {
+  width: 100%;
+  max-width: 211px;
+}
+footer .columns {
+  display: flex;
+  justify-content: space-between;
+}
+footer .columns h3 {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 24px;
+}
+footer .columns li {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
 @media screen and (min-width: 1024px) {
   body.zeroscroll {
     overflow-y: scroll;
@@ -1721,6 +1729,7 @@ main .glide__track .glide__slides .glide__slide img {
   }
   main .fruits .card {
     flex: 1 0 23%;
+    max-width: 23%;
     height: auto;
     display: flex;
     flex-direction: column;

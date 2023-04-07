@@ -756,7 +756,7 @@ main {
                 align-items: center;
                 height: 24px;
 
-               .finalprice {
+                .finalprice {
                     color: $redlight;
                     font-family: 'Nunito Sans';
                     font-style: normal;
@@ -765,14 +765,15 @@ main {
                     line-height: 135%;
                     letter-spacing: 0.01em;
                     padding-right: 6px;
-                    &+.normalprice{
+
+                    &+.normalprice {
                         text-decoration: line-through;
                         font-size: 16px;
 
                     }
                 }
 
-              .normalprice {
+                .normalprice {
                     font-family: 'Nunito Sans';
                     font-style: normal;
                     font-weight: 700;
@@ -835,24 +836,24 @@ main {
 
     }
 
-    .pagination {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 16px;
-        gap: 40px;
-        font-family: 'Nunito Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 112%;
+    // .pagination {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: flex-end;
+    //     align-items: center;
+    //     padding: 16px;
+    //     gap: 40px;
+    //     font-family: 'Nunito Sans';
+    //     font-style: normal;
+    //     font-weight: 700;
+    //     font-size: 14px;
+    //     line-height: 112%;
 
-        &:hover {
-            color: $buttonhover;
+    //     &:hover {
+    //         color: $buttonhover;
 
-        }
-    }
+    //     }
+    // }
 
     .glide__track {
         margin-bottom: 20px;
@@ -991,7 +992,11 @@ main {
             margin-top: 30px;
 
             .card {
-                flex: 1 0 23%;
+                // flex: 1 0 23%;
+                // max-width: 23%;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 23%;
                 height: auto;
                 display: flex;
                 flex-direction: column;
@@ -1045,47 +1050,62 @@ main {
                 }
             }
         }
-
-        .glide {}
     }
 
-    footer {
-        .logo {
-            display: initial;
-            width: 100%;
-            padding-top: 25px;
-            display: flex;
-            justify-content: center;
-            padding-bottom: 20px;
+    .glider {
+        padding-left: 20px;
+        padding-right: 20px;
 
-            img {
-                width: 100%;
-                max-width: 211px;
+        .glide__arrows {
+
+            .fa-circle-chevron-left {
+                font-size: 20px;
             }
-        }
-
-        .columns {
-            display: flex;
-            justify-content: space-between;
-
-            h3 {
-                font-family: 'Nunito Sans';
-                font-style: normal;
-                font-weight: 600;
-                font-size: 22px;
-                line-height: 24px;
+            .fa-circle-chevron-right{
+                font-size: 20px;
             }
 
-            li {
-                font-family: 'Nunito Sans';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 22px;
-            }
         }
     }
 }
+
+footer {
+    .logo {
+        display: initial;
+        width: 100%;
+        padding-top: 25px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+
+        img {
+            width: 100%;
+            max-width: 211px;
+        }
+    }
+
+    .columns {
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 24px;
+        }
+
+        li {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+
 
 @media screen AND (min-width: 1024px) {
     body {
@@ -1343,6 +1363,7 @@ main {
 
             .card {
                 flex: 1 0 23%;
+                max-width: 23%;
                 height: auto;
                 display: flex;
                 flex-direction: column;
