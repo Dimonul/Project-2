@@ -287,17 +287,17 @@ body * {
   box-sizing: border-box;
 }
 
-.berries {
+.body {
   margin-top: 72px;
 }
-.berries p {
+.body p {
   color: #1D1929;
 }
-.berries .homepage {
+.body .homepage {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.berries .homepage a {
+.body .homepage a {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 600;
@@ -305,7 +305,7 @@ body * {
   line-height: 130%;
   color: #646464;
 }
-.berries .page {
+.body .page {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 600;
@@ -313,19 +313,19 @@ body * {
   line-height: 130%;
   width: 100%;
 }
-.berries .page h4 {
+.body .page h4 {
   color: #BCBCBC;
 }
-.berries .page span {
+.body .page span {
   color: #646464;
 }
-.berries .titleimg {
+.body .titleimg {
   width: 100%;
   border-style: solid;
   border-color: #646464;
   border-width: 1px;
 }
-.berries .title h2 {
+.body .title h2 {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 800;
@@ -337,43 +337,43 @@ body * {
   height: 30px;
   justify-content: flex-start;
 }
-.berries .rev {
+.body .rev {
   display: flex;
   align-items: center;
 }
-.berries .rev .review {
+.body .rev .review {
   display: inline-block;
   position: relative;
   width: 90px;
   height: 16px;
 }
-.berries .rev .review .stars {
+.body .rev .review .stars {
   display: inline-block;
   font-family: "Font Awesome 6 Free";
   z-index: 0;
   position: absolute;
 }
-.berries .rev .review .stars:before {
+.body .rev .review .stars:before {
   content: "\f005\f005\f005\f005\f005";
   font-weight: 900;
   font-style: normal;
   line-height: 1;
   color: #646464;
 }
-.berries .rev .review .stars.full {
+.body .rev .review .stars.full {
   width: 89%;
   overflow: hidden;
   max-width: 90px;
   position: absolute;
   z-index: 1;
 }
-.berries .rev .review .stars.full:before {
+.body .rev .review .stars.full:before {
   color: yellow;
 }
-.berries .rev .review p {
+.body .rev .review p {
   display: flex;
 }
-.berries .discount {
+.body .discount {
   display: flex;
   align-items: center;
   height: 24px;
@@ -381,7 +381,7 @@ body * {
   padding-bottom: 20px;
   gap: 10px;
 }
-.berries .discount :nth-child(1) {
+.body .discount :nth-child(1) {
   color: #CA8383;
   font-family: "Nunito Sans";
   font-style: normal;
@@ -390,7 +390,7 @@ body * {
   line-height: 135%;
   letter-spacing: 0.01em;
 }
-.berries .discount :nth-child(2) {
+.body .discount :nth-child(2) {
   text-decoration: line-through;
   font-family: "Nunito Sans";
   font-style: normal;
@@ -399,12 +399,12 @@ body * {
   line-height: 135%;
   letter-spacing: 0.01em;
 }
-.berries .quantityselector {
+.body .quantityselector {
   position: relative;
   max-width: 150px;
   width: 100%;
 }
-.berries .quantityselector input {
+.body .quantityselector input {
   width: 100%;
   height: 48px;
   border-style: solid;
@@ -416,22 +416,22 @@ body * {
   padding-left: 35px;
   padding-right: 35px;
 }
-.berries .quantityselector i {
+.body .quantityselector i {
   position: absolute;
   bottom: 19px;
   height: 12px;
 }
-.berries .quantityselector i.fa-minus {
+.body .quantityselector i.fa-minus {
   left: 10px;
 }
-.berries .quantityselector i.fa-plus {
+.body .quantityselector i.fa-plus {
   right: 10px;
 }
-.berries .addtocart button {
+.body .addtocart button {
   margin-top: 20px;
   max-width: 330px;
 }
-.berries p {
+.body p {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 600;
@@ -440,7 +440,7 @@ body * {
   display: flex;
   align-items: center;
 }
-.berries h6 {
+.body h6 {
   font-family: "Public Sans";
   font-style: normal;
   font-weight: 400;
@@ -450,7 +450,7 @@ body * {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-.berries .addtocart button {
+.body .addtocart button {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -473,7 +473,7 @@ body * {
   line-height: 112%;
   min-width: 285px;
 }
-.berries .accordion {
+.body .accordion {
   max-width: 400px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -481,10 +481,10 @@ body * {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.berries .accordion ul {
+.body .accordion ul {
   list-style-type: circle;
 }
-.berries .accordion .accordion__title {
+.body .accordion .accordion__title {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 800;
@@ -498,20 +498,20 @@ body * {
   background: #BCBCBC;
   padding: 10px;
 }
-.berries .accordion .accordion__title.active {
+.body .accordion .accordion__title.active {
   background: white;
   color: #059E67;
 }
-.berries .accordion .accordion__title.active:after {
+.body .accordion .accordion__title.active:after {
   transform: translateY(-50%) rotate(0.5turn);
 }
-.berries .accordion .accordion__title.active + .accordion__content {
+.body .accordion .accordion__title.active + .accordion__content {
   display: block;
 }
-.berries .accordion .accordion__title.active + .accordion__content li {
+.body .accordion .accordion__title.active + .accordion__content li {
   list-style-type: disc;
 }
-.berries .accordion .accordion__title:after {
+.body .accordion .accordion__title:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -523,7 +523,7 @@ body * {
   background-size: 15px;
   transition: transform 0.4s;
 }
-.berries .accordion .accordion__content {
+.body .accordion .accordion__content {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 800;
@@ -535,11 +535,11 @@ body * {
   color: #1D1929;
   padding: 16px 24px;
 }
-.berries .accordion .accordion__content form {
+.body .accordion .accordion__content form {
   display: flex;
   flex-direction: column;
 }
-.berries .accordion .accordion__content form ::placeholder {
+.body .accordion .accordion__content form ::placeholder {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -547,7 +547,7 @@ body * {
   padding: 8px 16px;
   gap: 8px;
 }
-.berries .accordion .accordion__content form input {
+.body .accordion .accordion__content form input {
   border: 1px solid #E8E8EA;
   border-radius: 18px;
   font-family: "Nunito Sans";
@@ -562,7 +562,7 @@ body * {
   height: 56px;
   padding: 8px;
 }
-.berries .accordion .accordion__content form textarea {
+.body .accordion .accordion__content form textarea {
   border: 1px solid #E8E8EA;
   border-radius: 18px;
   font-family: "Nunito Sans";
@@ -577,24 +577,24 @@ body * {
   padding: 8px;
 }
 @media screen and (min-width: 700px) {
-  .berries .container {
+  .body .container {
     padding-left: 40px;
     padding-right: 40px;
   }
-  .berries .desktop {
+  .body .desktop {
     display: flex;
     gap: 55px;
   }
-  .berries .desktop .titleimg,
-.berries .desktop .desktopmode {
+  .body .desktop .titleimg,
+.body .desktop .desktopmode {
     width: 50%;
   }
-  .berries .desktop .oneline {
+  .body .desktop .oneline {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
   }
-  .berries .desktop .oneline h5 {
+  .body .desktop .oneline h5 {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 800;
@@ -604,21 +604,21 @@ body * {
     display: flex;
     justify-content: flex-end;
   }
-  .berries .desktop .rev .review {
+  .body .desktop .rev .review {
     width: 135px;
     height: 24px;
   }
-  .berries .desktop .rev .review .stars {
+  .body .desktop .rev .review .stars {
     font-size: 24px;
   }
-  .berries .desktop .rev .review .stars.full {
+  .body .desktop .rev .review .stars.full {
     max-width: 135px;
   }
-  .berries .desktop img {
+  .body .desktop img {
     height: auto;
     width: 100%;
   }
-  .berries .desktop h2 {
+  .body .desktop h2 {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 800;
@@ -628,19 +628,19 @@ body * {
     align-items: center;
     letter-spacing: 0.01em;
   }
-  .berries .desktop p {
+  .body .desktop p {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 800;
     font-size: 22px;
     line-height: 36px;
   }
-  .berries .highres {
+  .body .highres {
     display: flex;
     align-items: flex-end;
     gap: 15px;
   }
-  .berries .homepage a {
+  .body .homepage a {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 600;
@@ -648,41 +648,41 @@ body * {
     line-height: 130%;
     color: #646464;
   }
-  .berries .desktop .discount p {
+  .body .desktop .discount p {
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 135%;
   }
-  .berries .accordion {
+  .body .accordion {
     width: 100%;
     max-width: 100%;
     box-shadow: none;
   }
-  .berries .accordion .accordion__content {
+  .body .accordion .accordion__content {
     display: none;
     border: 1px solid #646464;
   }
-  .berries .accordion .accordion__title {
+  .body .accordion .accordion__title {
     float: left;
     width: auto;
     border: 1px solid #646464;
   }
-  .berries .accordion .accordion__title:after {
+  .body .accordion .accordion__title:after {
     display: none;
   }
-  .berries .accordion .accordion__title.active + .accordion__content {
+  .body .accordion .accordion__title.active + .accordion__content {
     box-sizing: border-box;
     float: right;
     margin-left: -100%;
     width: 100%;
     margin-top: 57px;
   }
-  .berries .accordion .accordion__title.active + .accordion__content li {
+  .body .accordion .accordion__title.active + .accordion__content li {
     list-style-type: disc;
   }
-  .berries .accordion .accordion__content form textarea {
+  .body .accordion .accordion__content form textarea {
     max-width: 745px;
     width: 100%;
   }
