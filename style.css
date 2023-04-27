@@ -321,9 +321,13 @@ body * {
 }
 .body .titleimg {
   width: 100%;
+  height: 100%;
   border-style: solid;
   border-color: #646464;
   border-width: 1px;
+}
+.body .titleimg img {
+  max-width: 325px;
 }
 .body .title h2 {
   font-family: "Nunito Sans";
@@ -614,9 +618,10 @@ body * {
   .body .desktop .rev .review .stars.full {
     max-width: 135px;
   }
-  .body .desktop img {
+  .body .desktop .titleimg img {
     height: auto;
     width: 100%;
+    max-width: 100%;
   }
   .body .desktop h2 {
     font-family: "Nunito Sans";
@@ -648,12 +653,23 @@ body * {
     line-height: 130%;
     color: #646464;
   }
-  .body .desktop .discount p {
+  .body .desktop .discount :nth-child(1) {
+    color: #CA8383;
     font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 135%;
+    letter-spacing: 0.01em;
+  }
+  .body .desktop .discount :nth-child(2) {
+    text-decoration: line-through;
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 135%;
+    letter-spacing: 0.01em;
   }
   .body .accordion {
     width: 100%;

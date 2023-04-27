@@ -77,6 +77,7 @@ function productsHtml() {
         
         })
     console.log(items)
+    
     } else {
          items =products
     }

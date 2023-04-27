@@ -9,7 +9,6 @@ sessionStorage.setItem('categorii', JSON.stringify(result));
 
 };
 
-
 if (!sessionStorage.getItem('categorii')){  //daca nu exista categorii luate de pe server, se executa getCategories 56
 getCategories(56);
 }
@@ -22,22 +21,24 @@ function getProducts(categoryId) {
     .then((result) =>{
 sessionStorage.setItem('products', JSON.stringify(result));
 
-// let eventProduse=document.createEvent('HTMLEvents');
-// eventProduse.initEvent('produseIncarcate', true, true);
-// eventProduse.eventName = 'produseIncarcate';
-// document.dispatchEvent(eventProduse)
-// const produseIncarcate = new Event("produseIncarcate");
-// document.addEventListener("DOMContentLoaded", () => {
-//     document.dispatchEvent(produseIncarcate);
-//     console.log('456');
-//     })
 })};
-
 
 if (!sessionStorage.getItem('products')){  //daca nu exista categorii luate de pe server, se executa getCategories 56
 getProducts(56);
 }
 
+
+function getReviews(categoryId) {
+    fetch('https://magento-demo.tk/rest/V1/curs/produse/' + categoryId, { method: 'GET' })
+    .then((response) => response.json())
+    .then((result) =>{
+sessionStorage.setItem('products', JSON.stringify(result));
+
+})};
+
+if (!sessionStorage.getItem('products')){  //daca nu exista categorii luate de pe server, se executa getCategories 56
+getProducts(56);
+}
 
 function categoriesHeader (){
     let meniu='';
